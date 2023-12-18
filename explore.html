@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Explore</title>
+
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/test.css">
+    <link rel="stylesheet" href="assets/css/tab.css">
+  </head>
+
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav_logo">Nawasena</a>
+
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="index.html" class="nav_link">Home</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link active-link">Explore</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="" class="nav_link">About</a>
+                    </li>
+                </ul>
+                <!-- <div class="nav_dark">
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div> -->
+
+                <i class="ri-close-line nav_close" id="nav-close"></i>
+            </div>
+
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container tab-cont" style="margin-top: 10rem;">
+        <div class="tab-container">
+          <div class="tab-filter-container">
+            <li class="filter-btn" data-tab="explore">
+              Explore
+            </li>
+            <li class="filter-btn active" data-tab="event">
+              Event
+            </li>
+          </div>
+
+          <div class="tab-filter-item-container">
+            <div class="tab-item explore">
+                <div class="section__title">
+                    <h4>Jelajahi Kebudayaan</h4>
+                </div>
+                    <section class="popular section explore-container">
+                       <div class="wrapper">
+                          <div id="search-container">
+                            <input type="search" id="search-input" placeholder="Cari"/>
+                            <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
+                          </div>
+                          <div id="buttons">
+                            <button class="button-value" onclick="filterExplore('all')">All</button>
+                            <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
+                            <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
+                            <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
+                            <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
+                          </div>
+                       </div>
+                    <div id="explorer"></div>
+                    <div id="no-results-message" class="no-results" style="display: none;">Data not found</div>
+                </section>
+            </div>
+            <div class="tab-item event select_tab">
+                <div class="section__title">
+                    <h4>Event</h4>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+    
+    <!-- <div class="tab-item web-development">
+        <div class="section__title" style="margin-top: 10rem;">
+            <h4>Jelajahi Kebudayaan</h4>
+        </div>
+            <section class="popular section explore-container">
+               <div class="wrapper">
+                  <div id="search-container">
+                    <input type="search" id="search-input" placeholder="Cari"/>
+                    <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
+                  </div>
+                  <div id="buttons">
+                    <button class="button-value" onclick="filterExplore('all')">All</button>
+                    <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
+                    <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
+                    <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
+                    <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
+                  </div>
+               </div>
+               <div id="explorer"></div>
+               <div id="no-results-message" class="no-results" style="display: none;">Data not found</div>
+            </section>
+        </div> -->
+
+            <footer class="footer section">
+                <div class="footer__container container grid">
+                    <div class="footer__content grid">
+                        <div class="footer__data">
+                            <h3 class="footer__title">Nawasena</h3>
+                            <p class="footer__description">
+                                Lahir dari tekad untuk merayakan, melestarikan, dan memajukan kekayaan budaya Indonesia.
+                            </p>
+                        </div>
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">About</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">About Us</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Features</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">New & Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">Company</h3>
+                            <ul>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Team</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Plan y Pricing</a>
+                                </li>
+                                <li class="footer__item">
+                                    <a href="" class="footer__link">Become a member</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__data">
+                            <h3 class="footer__subtitle">Support</h3>
+                            <div>
+                                <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                                    <i class="ri-facebook-box-fill"></i>
+                                </a>
+                                <a href="https://twitter.com/" target="_blank" class="footer__social">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                                <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                                    <i class="ri-instagram-fill"></i>
+                                </a>
+                                <a href="https://www.youtube.com/" target="_blank" class="footer__social">
+                                    <i class="ri-youtube-fill"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__rights">
+                        <p class="footer__copy">&#169; 2023 Nawasena. All rigths reserved.</p>
+                        <div class="footer__terms">
+                            <a href="#" class="footer__terms-link">Terms & Agreements</a>
+                            <a href="#" class="footer__terms-link">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+       <!--=============== SCROLL REVEAL===============-->
+       <script src="assets/js/scrollreveal.min.js"></script>
+        
+       <!--=============== SWIPER JS ===============-->
+       <script src="assets/js/swiper-bundle.min.js"></script>
+
+       <!--=============== MAIN JS ===============-->
+       <script src="assets/js/main.js"></script>
+       <script src="assets/js/tab.js"></script>
+
+      <script>
+         const texts = ["BudayaKu", "INDONESIA"];
+         let textIndex = 0;
+         let charIndex = 0;
+         const speed = 300; 
+
+         function typeWriter() {
+            if (charIndex < texts[textIndex].length) {
+               document.getElementById("typed-text").innerHTML += texts[textIndex].charAt(charIndex);
+               charIndex++;
+               setTimeout(typeWriter, speed);
+            } else {
+               setTimeout(eraseText, 1000);
+            }
+         }
+
+         function eraseText() {
+            if (charIndex > 0) {
+               let currentText = texts[textIndex].substring(0, charIndex - 1);
+               document.getElementById("typed-text").innerHTML = currentText;
+               charIndex--;
+               setTimeout(eraseText, speed / 2);
+            } else {
+               textIndex = (textIndex + 1) % texts.length;
+               setTimeout(typeWriter, speed);
+            }
+         }
+
+      </script>
+         <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/65689f55bfb79148e5988a49/1hggasrqh';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+      </script>
+
+<script>
+   let explorer = {
+       data: [
+           {
+               category: "Candi",
+               image: "https://i.ibb.co/CQKXzdY/borobudur.jpg",
+               name: "Candi Borobudur",
+               location: "Magelang, Jawa Tengah",
+               page: "borobudur.html",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/Bq01LLt/kecak.jpg",
+               name: "Tari Kecak",
+               location: "Bali",
+               page: "",
+           },
+           {
+               category: "Acara",
+               image: "https://i.ibb.co/JBH7WRz/ngaben.jpg",
+               name: "Ngaben",
+               location: "Bali",
+               page: "",
+           },
+           {
+              category: "Warisan",
+              image: "https://i.ibb.co/RQZsTtJ/keris.jpg",
+              name: "Keris",
+              location: "Jawa",
+              page: "",
+            },
+            {
+                category: "Tari",
+                image: "https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg",
+                name: "Turonggo Yakso",
+                location: "Trenggalek, Jawa Timur",
+                page: "",
+            },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/xM4qwYC/angklung.jpg",
+               name: "Angklung",
+               location: "Jawa",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/XLPvDDH/tenun.jpg",
+               name: "Tenun",
+               location: "Jawa",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/CwpJKps/2d2a6bc9744a59b085477e090672fc4b.jpg",
+               name: "Tari Saman",
+               location: "Aceh, Sumatera",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/KNSjqB8/wayang.jpg",
+               name: "Wayang Kulit",
+               location: "Jawa",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/7XsYzcH/ff24272b196603c382fc2840bbb3514e.jpg",
+               name: "Tari Piring",
+               location: "Minangkabau, Sumatera",
+               page: "",
+           },
+           {
+               category: "Acara",
+               image: "https://i.ibb.co/RN0cMfj/karapan-sapi.jpg",
+               name: "Karapan Sapi",
+               location: "Madura, Jawa Timur",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/tpYNzk1/687b9ec233069817a524bdb13d1ba255.jpg",
+               name: "Tari Zapin",
+               location: "Riau, Sumatera",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/0fdcfDY/f4cafc00953e111620ed48f54938614b.jpg",
+               name: "Tari Sembah",
+               location: "Lampung, Sumatera",
+               page: "",
+           },
+           {
+               category: "Candi",
+               image: "https://i.ibb.co/kHnCMTB/image.png",
+               name: "Candi Jawi",
+               location: "Pasuruan ,Jawa Timur",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg",
+               name: "Tari Jaipong",
+               location: "Jawa Barat",
+               page: "",
+           },
+           {
+               category: "Candi",
+               image: "https://i.ibb.co/JRpFsK7/image.png",
+               name: "Candi Singosari",
+               location: "Malang, Jawa Timur",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/jTzbywh/image.png",
+               name: "Pencak Silat",
+               location: "Indonesia",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/wc3LdTw/image.png",
+               name: "Tifa",
+               location: "Papua",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/Sv8bhVx/5f815f61122b22597a0fda0a52e1f0d2.jpg",
+               name: "Tari Caci",
+               location: "Nusa Tenggara Timur",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/F42LJZN/image.png",
+               name: "Papeda",
+               location: "Papua",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/GnCQkGB/tari-lenggo-3.jpg",
+               name: "Tari Mpaa Lenggo",
+               location: "Nusa Tenggara Barat",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/n0NQ9bK/76787993e601dc92bf05761093426e0d.jpg",
+               name: "Tari Mandau",
+               location: "Kalimantan Tengah",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/GTSnv2B/image.png",
+               name: "Rendang",
+               location: "Sumatera Barat",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/VMYxjSJ/303a0051657665ee9326217d539959bb.jpg",
+               name: "Tari Burung Enggang",
+               location: "Kalimantan Timur",
+               page: "",
+           },
+           {
+               category: "Warisan",
+               image: "https://i.ibb.co/jZshMJD/image.png",
+               name: "Kacaping",
+               location: "Sulawesi Selatan",
+               page: "",
+           },
+           {
+               category: "Tari",
+               image: "https://i.ibb.co/F6WnL73/image.png",
+               name: "Tari Kipas Pakarena",
+               location: "Sulawesi Selatan",
+               page: "",
+           },
+           {
+               category: "Acara",
+               image: "https://i.ibb.co/61cv0Hk/image.png",
+               name: "Bakar Batu",
+               location: "Papua",
+               page: "",
+           },
+       ],
+   };
+
+   let popularContainer = document.createElement("div");
+   popularContainer.classList.add("popular_container", "container", "grid-1");
+
+   document.getElementById("explorer").appendChild(popularContainer);
+
+   for (let i of explorer.data) {
+       let article = document.createElement("article");
+       article.classList.add("popular_card", i.category.toLowerCase());
+
+       let linkArticle = document.createElement("a");
+       linkArticle.setAttribute("href", i.page);
+
+       let linkImage = document.createElement("a");
+       linkImage.setAttribute("href", i.page);
+
+       let imgContainer = document.createElement("div");
+       imgContainer.classList.add("popular_image");
+
+       let image = document.createElement("img");
+       image.setAttribute("src", i.image);
+       image.classList.add("popular_img");
+
+       let shadow = document.createElement("div");
+       shadow.classList.add("popular_shadow");
+
+       imgContainer.appendChild(image);
+       imgContainer.appendChild(shadow);
+
+       linkImage.appendChild(imgContainer);
+       linkArticle.appendChild(linkImage);
+
+       article.appendChild(linkArticle);
+
+       let linkTitle = document.createElement("a");
+       linkTitle.setAttribute("href", i.page);
+
+       let title = document.createElement("h2");
+       title.classList.add("popular_title");
+       title.innerText = i.name;
+
+       linkTitle.appendChild(title);
+       linkArticle.appendChild(linkTitle);
+
+       let location = document.createElement("div");
+       location.classList.add("popular_location");
+
+       let mapPinIcon = document.createElement("i");
+       mapPinIcon.classList.add("ri-map-pin-line");
+
+       let locationSpan = document.createElement("span");
+       locationSpan.innerText = i.location;
+
+       location.appendChild(mapPinIcon);
+       location.appendChild(locationSpan);
+
+       article.appendChild(location);
+       popularContainer.appendChild(article);
+   }
+
+   function filterExplore(value) {
+       let buttons = document.querySelectorAll(".button-value");
+       buttons.forEach((button) => {
+           if (value.toUpperCase() === button.innerText.toUpperCase()) {
+               button.classList.add("active");
+           } else {
+               button.classList.remove("active");
+           }
+       });
+
+       let elements = document.querySelectorAll(".popular_card");
+       elements.forEach((element) => {
+           if (value === "all") {
+               element.classList.remove("hide");
+           } else {
+               if (element.classList.contains(value.toLowerCase())) {
+                   element.classList.remove("hide");
+               } else {
+                   element.classList.add("hide");
+               }
+           }
+       });
+   }
+
+   //search without enter
+   // document.getElementById("search-input").addEventListener("input", () => {
+   //          filterBySearch();
+   //      });
+
+   //      function filterBySearch() {
+   //          let searchInput = document.getElementById("search-input").value.trim().toUpperCase();
+   //          let elements = document.querySelectorAll(".popular_card");
+
+   //          elements.forEach((element) => {
+   //              let title = element.querySelector(".popular_title").innerText.toUpperCase();
+   //              let category = element.classList[1].toUpperCase();
+   //              let location = element.querySelector(".popular_location span").innerText.toUpperCase();
+
+   //              let additionalContent = title + " " + category + " " + location;
+
+   //              if (searchInput === "" || additionalContent.includes(searchInput)) {
+   //                  element.classList.remove("hide");
+   //              } else {
+   //                  element.classList.add("hide");
+   //              }
+   //          });
+   //      }
+
+   document.getElementById("search-input").addEventListener("input", (event) => {
+      if (event.key === "Enter") {
+         filterBySearch();
+      }
+   });
+
+   function filterBySearch(searchInput) {
+   if (searchInput === undefined) {
+      searchInput = document.getElementById("search-input").value.trim().toUpperCase();
+   }
+
+   let elements = document.querySelectorAll(".popular_card");
+   let noResultsMessage = document.getElementById("no-results-message");
+
+   let foundResults = false;
+
+   elements.forEach((element) => {
+      let title = element.querySelector(".popular_title").innerText.toUpperCase();
+      let category = element.classList[1].toUpperCase();
+      let location = element.querySelector(".popular_location span").innerText.toUpperCase();
+
+      let additionalContent = title + " " + category + " " + location;
+
+      if (searchInput === "" || additionalContent.includes(searchInput)) {
+         element.classList.remove("hide");
+         foundResults = true;
+      } else {
+         element.classList.add("hide");
+      }
+   });
+
+   if (foundResults) {
+      noResultsMessage.style.display = "none";
+   } else {
+      noResultsMessage.style.display = "block";
+      noResultsMessage.innerText = "Data Not Found";
+   }
+   }
+
+   document.getElementById("search-input").addEventListener("input", () => {
+   let searchInput = document.getElementById("search-input").value.trim().toUpperCase();
+
+   if (searchInput === "") {
+      resetFilter();
+   }
+   });
+
+   function resetFilter() {
+   let elements = document.querySelectorAll(".popular_card");
+   let noResultsMessage = document.getElementById("no-results-message");
+
+   elements.forEach((element) => {
+      element.classList.remove("hide");
+   });
+
+   noResultsMessage.style.display = "none";
+   }
+
+   document.getElementById("search").addEventListener("click", () => {
+   filterBySearch();
+   });
+
+   document.getElementById("search-input").addEventListener("keyup", (event) => {
+   if (event.key === "Enter") {
+      filterBySearch();
+   }
+   });
+
+   window.onload = () => {
+   filterExplore("all");
+   };
+
+</script>
+
+  </body>
+</html>
