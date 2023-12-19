@@ -49,38 +49,38 @@
     <div class="container tab-cont" style="margin-top: 10rem;">
         <div class="tab-container">
           <div class="tab-filter-container">
-            <li class="filter-btn" data-tab="explore">
-              Explore
+            <li class="filter-btn active-tab" data-tab="explore">
+              <p class="tab_title">Explore</p>
             </li>
-            <li class="filter-btn active" data-tab="event">
-              Event
+            <li class="filter-btn" data-tab="event">
+                <p class="tab_title">Event</p>
             </li>
           </div>
 
-          <div class="tab-filter-item-container">
-            <div class="tab-item explore">
+          <div class="tab-filter-item-container" style="height: 145rem;">
+            <div class="tab-item explore select_tab">
                 <div class="section__title">
                     <h4>Jelajahi Kebudayaan</h4>
                 </div>
-                    <section class="popular section explore-container">
-                       <div class="wrapper">
-                          <div id="search-container">
-                            <input type="search" id="search-input" placeholder="Cari"/>
-                            <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
-                          </div>
-                          <div id="buttons">
-                            <button class="button-value" onclick="filterExplore('all')">All</button>
-                            <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
-                            <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
-                            <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
-                            <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
-                          </div>
+                <section class="popular section explore-container">
+                    <div class="wrapper">
+                       <div id="search-container">
+                         <input type="search" id="search-input" placeholder="Cari"/>
+                         <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
                        </div>
+                       <div id="buttons">
+                         <button class="button-value" onclick="filterExplore('all')">All</button>
+                         <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
+                         <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
+                         <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
+                         <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
+                       </div>
+                    </div>
                     <div id="explorer"></div>
                     <div id="no-results-message" class="no-results" style="display: none;">Data not found</div>
-                </section>
+                 </section>
             </div>
-            <div class="tab-item event select_tab">
+            <div class="tab-item event">
                 <div class="section__title">
                     <h4>Event</h4>
                 </div>
@@ -88,30 +88,7 @@
             </div>
         </div>
     </div>
-    </div>
-    
-    <!-- <div class="tab-item web-development">
-        <div class="section__title" style="margin-top: 10rem;">
-            <h4>Jelajahi Kebudayaan</h4>
-        </div>
-            <section class="popular section explore-container">
-               <div class="wrapper">
-                  <div id="search-container">
-                    <input type="search" id="search-input" placeholder="Cari"/>
-                    <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
-                  </div>
-                  <div id="buttons">
-                    <button class="button-value" onclick="filterExplore('all')">All</button>
-                    <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
-                    <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
-                    <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
-                    <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
-                  </div>
-               </div>
-               <div id="explorer"></div>
-               <div id="no-results-message" class="no-results" style="display: none;">Data not found</div>
-            </section>
-        </div> -->
+</div>
 
             <footer class="footer section">
                 <div class="footer__container container grid">
@@ -189,35 +166,6 @@
        <script src="assets/js/main.js"></script>
        <script src="assets/js/tab.js"></script>
 
-      <script>
-         const texts = ["BudayaKu", "INDONESIA"];
-         let textIndex = 0;
-         let charIndex = 0;
-         const speed = 300; 
-
-         function typeWriter() {
-            if (charIndex < texts[textIndex].length) {
-               document.getElementById("typed-text").innerHTML += texts[textIndex].charAt(charIndex);
-               charIndex++;
-               setTimeout(typeWriter, speed);
-            } else {
-               setTimeout(eraseText, 1000);
-            }
-         }
-
-         function eraseText() {
-            if (charIndex > 0) {
-               let currentText = texts[textIndex].substring(0, charIndex - 1);
-               document.getElementById("typed-text").innerHTML = currentText;
-               charIndex--;
-               setTimeout(eraseText, speed / 2);
-            } else {
-               textIndex = (textIndex + 1) % texts.length;
-               setTimeout(typeWriter, speed);
-            }
-         }
-
-      </script>
          <script type="text/javascript">
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
@@ -231,7 +179,7 @@
       </script>
 
 <script>
-   let explorer = {
+ let explorer = {
        data: [
            {
                category: "Candi",
@@ -354,29 +302,29 @@
            },
            {
                category: "Warisan",
-               image: "https://i.ibb.co/wc3LdTw/image.png",
+               image: "https://i.ibb.co/6Yc16c8/Image.png",
                name: "Tifa",
                location: "Papua",
                page: "",
            },
            {
                category: "Tari",
-               image: "https://i.ibb.co/Sv8bhVx/5f815f61122b22597a0fda0a52e1f0d2.jpg",
+               image: "https://i.ibb.co/2jNnK45/Image.png",
                name: "Tari Caci",
                location: "Nusa Tenggara Timur",
                page: "",
            },
            {
                category: "Warisan",
-               image: "https://i.ibb.co/F42LJZN/image.png",
+               image: "https://i.ibb.co/WDycbyF/Image.png",
                name: "Papeda",
                location: "Papua",
                page: "",
            },
            {
                category: "Tari",
-               image: "https://i.ibb.co/GnCQkGB/tari-lenggo-3.jpg",
-               name: "Tari Mpaa Lenggo",
+               image: "https://i.ibb.co/w0626WL/Image.png",
+               name: "Tari Mpaa Lenggogo",
                location: "Nusa Tenggara Barat",
                page: "",
            },
@@ -417,7 +365,7 @@
            },
            {
                category: "Acara",
-               image: "https://i.ibb.co/61cv0Hk/image.png",
+               image: "https://i.ibb.co/qdHvz5C/Image.png",
                name: "Bakar Batu",
                location: "Papua",
                page: "",
@@ -426,63 +374,64 @@
    };
 
    let popularContainer = document.createElement("div");
-   popularContainer.classList.add("popular_container", "container", "grid-1");
+    popularContainer.classList.add("popular_container", "container", "grid");
 
-   document.getElementById("explorer").appendChild(popularContainer);
+    document.getElementById("explorer").appendChild(popularContainer);
 
-   for (let i of explorer.data) {
-       let article = document.createElement("article");
-       article.classList.add("popular_card", i.category.toLowerCase());
+    for (let i of explorer.data) {
+        let article = document.createElement("article");
+        article.classList.add("popular_card", i.category.toLowerCase());
 
-       let linkArticle = document.createElement("a");
-       linkArticle.setAttribute("href", i.page);
+        let linkArticle = document.createElement("a");
+        linkArticle.setAttribute("href", i.page);
 
-       let linkImage = document.createElement("a");
-       linkImage.setAttribute("href", i.page);
+        let imgContainer = document.createElement("div");
+        imgContainer.classList.add("popular_image");
 
-       let imgContainer = document.createElement("div");
-       imgContainer.classList.add("popular_image");
+        let image = document.createElement("img");
+        image.setAttribute("src", i.image);
+        image.classList.add("popular_img");
 
-       let image = document.createElement("img");
-       image.setAttribute("src", i.image);
-       image.classList.add("popular_img");
 
-       let shadow = document.createElement("div");
-       shadow.classList.add("popular_shadow");
+        image.style.width = "300px";
+        image.style.maxWidth = "100%";
+        image.style.height = "auto";
+        // image.style.height = "180px";
 
-       imgContainer.appendChild(image);
-       imgContainer.appendChild(shadow);
+        let shadow = document.createElement("div");
+        shadow.classList.add("popular_shadow");
 
-       linkImage.appendChild(imgContainer);
-       linkArticle.appendChild(linkImage);
+        imgContainer.appendChild(image);
+        imgContainer.appendChild(shadow);
 
-       article.appendChild(linkArticle);
+        linkArticle.appendChild(imgContainer);
+        article.appendChild(linkArticle);
 
-       let linkTitle = document.createElement("a");
-       linkTitle.setAttribute("href", i.page);
+        let linkTitle = document.createElement("a");
+        linkTitle.setAttribute("href", i.page);
 
-       let title = document.createElement("h2");
-       title.classList.add("popular_title");
-       title.innerText = i.name;
+        let title = document.createElement("h2");
+        title.classList.add("popular_title");
+        title.innerText = i.name;
 
-       linkTitle.appendChild(title);
-       linkArticle.appendChild(linkTitle);
+        linkTitle.appendChild(title);
+        article.appendChild(linkTitle);
 
-       let location = document.createElement("div");
-       location.classList.add("popular_location");
+        let location = document.createElement("div");
+        location.classList.add("popular_location");
 
-       let mapPinIcon = document.createElement("i");
-       mapPinIcon.classList.add("ri-map-pin-line");
+        let mapPinIcon = document.createElement("i");
+        mapPinIcon.classList.add("ri-map-pin-line");
 
-       let locationSpan = document.createElement("span");
-       locationSpan.innerText = i.location;
+        let locationSpan = document.createElement("span");
+        locationSpan.innerText = i.location;
 
-       location.appendChild(mapPinIcon);
-       location.appendChild(locationSpan);
+        location.appendChild(mapPinIcon);
+        location.appendChild(locationSpan);
 
-       article.appendChild(location);
-       popularContainer.appendChild(article);
-   }
+        article.appendChild(location);
+        popularContainer.appendChild(article);
+    }
 
    function filterExplore(value) {
        let buttons = document.querySelectorAll(".button-value");
