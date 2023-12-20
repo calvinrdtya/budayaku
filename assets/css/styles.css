@@ -1,7 +1,7 @@
 @import "font.css";
 /* =============== VARIABLES CSS =============== */
 :root {
-  --header-height: 3rem;
+  --header-height: 2.5rem;
 
   /*========== Colors ==========*/
   /* Change favorite color to match images */
@@ -26,7 +26,7 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
   --container-color: hsl(0, 0%, 8%);
 
-  /*========== Font and typography ==========*/
+  /*========== Font and tygraphy ==========*/
   --body-font: 'Open Sans', sans-serif;
   --title-font: 'Raleway', sans-serif;
   --biggest-font-size: 2.5rem;
@@ -180,6 +180,12 @@ input {
   color: var(--title-color);
   text-align: center;
   margin-bottom: var(--mb-2);
+}
+
+.title_event {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
 }
 
 
@@ -422,7 +428,6 @@ input {
 /*=============== BUTTONS ===============*/
 .button {
   display: inline-block;
-  /* background-color: var(--first-color); */
   background-color: hsla(0, 0%, 100%, -2);
   color: var(--white-color);
   padding: 1rem 2rem;
@@ -463,12 +468,6 @@ input {
 .button--link:hover {
   background: none;
 }
-
-/* .btn_utama {
-  background-color: var(--container-color);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-} */
 
 /*=============== ABOUT ===============*/
 .about__data {
@@ -635,17 +634,17 @@ input {
 
 /*=============== PLACES ===============*/
 .place__card, .place__img {
-  border-radius: 1rem 0 1rem 0;
-  height: 130px;
-  width: 180px;
+  border-radius: 1rem;
 }
 
 .place__container {
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
 }
 
 .place__card {
+  height: 90%;
+  width: 100%;
   position: relative;
   overflow: var(--img-hidden);
 }
@@ -671,7 +670,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: .75rem .75rem 1rem;
+  padding: .75rem .75rem .75rem .75rem;
 }
 
 .place__rating {
@@ -694,8 +693,9 @@ input {
 }
 
 .place__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-25);
+  text-align: center;
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-1-25);
 }
 
 .place__subtitle {
@@ -871,7 +871,6 @@ input {
 }
 
 /*=============== MEDIA QUERIES ===============*/
-/* For small devices */
 @media screen and (max-width: 340px) {
   .place__container {
     grid-template-columns: max-content;
@@ -896,7 +895,6 @@ input {
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 568px) {
   .video__container {
     display: grid;
@@ -904,7 +902,7 @@ input {
     justify-content: center;
   }
   .place__container {
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(3, max-content);
   }
   .subscribe__form {
     width: 470px;
@@ -999,9 +997,6 @@ input {
   .place__container {
     padding-top: 2rem;
   }
-  /* .exp_description {
-    margin-bottom: var(--mb-2);
-  } */
   .experience__overlay:nth-child(1) {
     width: 363px;
     margin-right: 4rem;
@@ -1033,7 +1028,6 @@ input {
   }
 }
 
-/* For large devices */
 @media screen and (min-width: 1024px) {
   .container {
     margin-left: auto;
@@ -1097,10 +1091,9 @@ input {
     gap: 3rem 2rem;
   }
   .place__card, .place__img {
-    /* border-radius: 0 1rem 0 1rem; */
     border-radius: 1rem 0 1rem 0;
     height: 160px !important;
-    width: 240px !important;
+    width: 240px !important;  
   }
   .footer__content {
     justify-items: center;
@@ -1116,7 +1109,6 @@ input {
   }
 }
 
-/* For tall screens on mobiles y desktop*/
 @media screen and (min-height: 721px) {
   body {
     margin: 0;

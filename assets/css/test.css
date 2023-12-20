@@ -61,96 +61,84 @@
     transform: translateX(.4rem);
 }
 
-/* .popular {
-    margin-top: -1rem;
-} */
-
-/* .popular_card {
-    width: 80%;
-    height: 80%;
-} */
-
 .popular_container {
     grid-template-columns: 240px;
     justify-content: center;
     /* row-gap: 2rem; */
-  }
+}
 
 .popular_image {
-  border-radius: 0 15% 0 15%;
-  position: relative;
-  overflow: hidden;
+    border-radius: 0 15% 0 15%;
+    position: relative;
+    overflow: hidden;
 }
 
 .popular_image img {
-  width: auto;
-  height: auto;
+    width: auto;
+    height: auto;
 }
 
 .popular_img {
-  transition: transform .4s;
+    transition: transform .4s;
 }
 
 .popular_location {
-  display: inline-flex;
-  align-items: center;
-  column-gap: .25rem;
-  font-size: var(--smalli-font-size);
-  font-family: var(--second-font);
-  font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-size: var(--smalli-font-size);
+    font-family: var(--second-font);
+    font-weight: 500;
 }
 
 .popular_location i {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .popular_image:hover .popular_img {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 /* Explore */
-
 .explore {
-  position: relative;
+    position: relative;
 }
 
 .explore_image {
-  position: absolute;
-  overflow: hidden;
+    position: absolute;
+    overflow: hidden;
 }
 
 .explore_img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .explore_shadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg,
-              hsl(0, 0%, 0%) 5%,
-              hsla(0, 0%, 0%, 0) 40%,
-              hsla(0, 0%, 0%, 0) 60%,
-              hsl(0, 0%, 0%) 92%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+                hsl(0, 0%, 0%) 5%,
+                hsla(0, 0%, 0%, 0) 40%,
+                hsla(0, 0%, 0%, 0) 60%,
+                hsl(0, 0%, 0%) 92%);
 }
 
 .explore_content {
-  position: relative;
-  padding-top: 16rem;
-  text-align: center;
-  row-gap: 2.5rem;
+    position: relative;
+    padding-top: 16rem;
+    text-align: center;
+    row-gap: 2.5rem;
 }
 
 .explore_description {
     margin-top: .4rem;
 }
-
-
 
 @media (max-width: 768px) {
   .explore_description {
@@ -188,6 +176,9 @@
     font-size: var(--h4-font-size);
     color: var(--first-color-secondary);
   }
+  .section_title {
+    margin-bottom: var(--mb-2-5);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -205,20 +196,6 @@
   .explore_img {
     width: 100vw;
   }
-  /* .explore_description {
-    font-size: var(--h2-font-size) !important;
-    text-align: center !important;
-    width: 200% !important;
-    margin-left: -50% !important;
-    margin-right: -50% !important; 
-  } */
-  /* .explore_image img {
-    width: 1000px !important;
-    height: 370px !important;
-  } */
-  /* .popular_location {
-    font-size: var(--h2-font-size) !important;
-  } */
 }
 
 .popular_title:hover {
@@ -228,7 +205,7 @@
 
 @media screen and (min-width: 1023px) {
     .popular_container {
-        grid-template-columns: repeat(4, 240px);
+        grid-template-columns: repeat(4, 250px);
     }
 }
 
@@ -237,7 +214,7 @@
     margin-inline: auto;
   }
   .popular_container {
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(4, 250px);
     /* column-gap: 3rem; */
     padding-top: 4rem;
   }
@@ -262,6 +239,15 @@
   .explore_data .section_title {
     text-align: initial;
   }
+  .section_title {
+    margin-left: 8rem;
+    text-align: initial;
+  }
+  .title_event {
+    margin-bottom: -7rem;
+    margin-left: 8rem;
+    text-align: initial;
+  }
 }
 
 
@@ -270,24 +256,27 @@
     text-align: center;
     width: 100%;
     margin-top: -4rem;
-  }
-  #search-container {
+}
+
+#search-container {
     margin: 1em 0;
     cursor: pointer;
-  }
-  #search-container input {
+}
+
+#search-container input {
     color: #FFF;
     background-color: transparent;
     width: 40%;
     border-bottom: 2px solid #151515;
     padding: 1em 0.3em;
     transition: border-bottom-color 0.6s;
-  }
-  #search-container input:focus {
-    border-bottom-color: #FFF;
-  }
+}
 
-  #search-container button {
+#search-container input:focus {
+    border-bottom-color: #FFF;
+}
+
+#search-container button {
     cursor: pointer;
     padding: 1em 2em;
     margin-left: 1em;
@@ -300,14 +289,14 @@
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  }
+}
 
-  #search-container button:hover {
+#search-container button:hover {
     background-color: #2d2d2d;
     transform: translateY(-0.25rem);
-  }
+}
 
-  .button-value {
+.button-value {
     border: 1.4px solid #151515;
     padding: 1em 2em;
     border-radius: 2rem;
@@ -317,19 +306,11 @@
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     font-weight: var(--font-semi-bold);
     margin: 0.2rem;
-  }
-
-  .button-value:hover {
-    background-color: #5c5c5c;
 }
 
-/* #search-container button.active {
-    background-color: #FFF;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    color: #ff0000;
-    background-color: var(--container-color);
-} */
+.button-value:hover {
+    background-color: #5c5c5c;
+}
 
 .active {
     transform: translateY(-0.25rem);
@@ -344,30 +325,33 @@
     background-color: #2e2e2e;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     color: #ffffff;
-  }
+    border: 0.1rem solid #FFF;
+}
 
-  #explorer {
+#explorer {
     display: grid;
     grid-column-gap: 1.5em;
     padding: 2em 0;
     margin-bottom: 20rem;
-  }
+}
 
-  .hide {
+.hide {
     display: none;
-  }
+}
 
-  .no-results {
+.no-results {
     font-weight: bold;
     font-size: var(--h2-font-size);
     color: var(--title-color);
     justify-content: center;
     text-align: center;
     margin-top: -24rem;
-  }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .button-value {
         margin: 0.5rem;
     }
   }
+
+  
