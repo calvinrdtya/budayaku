@@ -810,7 +810,13 @@ input {
   margin-bottom: var(--mb-0-75);
 }
 
+.footer__item:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease; 
+}
+
 .footer__link {
+  transition: color 0.3s ease;
   color: var(--text-color);
 }
 
@@ -1025,7 +1031,9 @@ input {
     padding: 0;
   }
   .subscribe__container {
-    background-color: var(--first-color-second);
+    background-color: hsla(0, 0%, 24%, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     padding: 3.5rem 0;
   }
   .subscribe__input {
