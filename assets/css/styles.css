@@ -31,6 +31,7 @@
   --body-font: 'Open Sans', sans-serif;
   --title-font: 'Raleway', sans-serif;
   --biggest-font-size: 2.5rem;
+  --medium-font-size: 1.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -360,9 +361,13 @@ input {
 
 .home__container {
   position: relative;
-  height: calc(100vh - var(--header-height));
+  height: calc(30vh - var(--header-height));
   align-content: center;
   row-gap: 3rem;
+}
+
+.home__data {
+  margin-top: -14rem;
 }
 
 .home__data-subtitle, 
@@ -373,14 +378,14 @@ input {
 }
 
 .home__data-subtitle {
+  font-size: var(--h3-font-size);
   display: block;
   font-weight: var(--font-semi-bold);
 }
 
 .home__data-title {
-  font-size: var(--biggest-font-size);
+  font-size: var(--medium-font-size);
   font-weight: var(--font-medium);
-  margin-bottom: var(--mb-2-5);
 }
 
 .home__social {
@@ -395,6 +400,7 @@ input {
 }
 
 .home__info {
+  margin-bottom: 2rem;
   background-color: hsla(0, 0%, 0%, .3);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -529,6 +535,10 @@ input {
 }
 
 /*=============== DISCOVER ===============*/
+#discover {
+  margin-top: -3rem;
+}
+
 .discover__card {
   position: relative;
   width: 200px;
@@ -724,7 +734,7 @@ input {
 
 /*=============== SUBSCRIBE ===============*/
 .subscribe__bg {
-  background-color: var(--first-color-second);
+  background-color: hsla(0, 0%, 24%, 0.1);
   padding: 2.5rem 0;
 }
 
@@ -848,7 +858,6 @@ input {
 
 /*========== SCROLL UP ==========*/
 .scrollup {
-  border-radius: 2rem;
   position: fixed;
   right: 1rem;
   bottom: -20%;
@@ -1032,8 +1041,6 @@ input {
   }
   .subscribe__container {
     background-color: hsla(0, 0%, 24%, 0.1);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     padding: 3.5rem 0;
   }
   .subscribe__input {
@@ -1054,6 +1061,16 @@ input {
     margin-top: 0.4rem;
     margin-left: -3rem;
   }
+  .home__data-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-2-5);
+  }
+  .about_ {
+    grid-template-columns: 400px 460px;
+    column-gap: 8.5rem;
+    padding-block: 1rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -1062,8 +1079,11 @@ input {
     margin-right: auto;
   }
   .home__container {
-    margin-top: -44rem;
+    margin-top: -40rem;
     grid-template-rows: 2fr .5fr;
+    height: calc(100vh - var(--header-height));
+    align-content: center;
+    row-gap: 3rem;
   }
   .home__info {
     background-color: hsla(0, 0%, 0%, .3);
@@ -1087,11 +1107,22 @@ input {
   .home__info-img {
     width: 250px;
   }
+  .home__data-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-2-5);
+  }
+  .home__data-subtitle {
+    font-size: var(--h2-font-size);
+  }
   .about__img-one {
     width: 230px;
   }
   .about__img-two {
     width: 290px;
+  }
+  #discover {
+    margin-top: 7rem;
   }
   .discover__card {
     width: 237px;
