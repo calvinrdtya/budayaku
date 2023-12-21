@@ -168,29 +168,44 @@ input:checked + label .event_description {
     transform: translateY(0) !important;
 }
 
-.event_card[for="januari-1"] {
+/* popular event */
+.event_card[for="popular-1"] {
+    background-image: url('https://i.ibb.co/2hmnyWK/image.png');
+}
+.event_card[for="popular-2"] {
+    background-image: url('https://i.ibb.co/8jQKntJ/image.png');
+}
+.event_card[for="popular-3"] {
+    background-image: url('https://i.ibb.co/PQmK5kH/image.png');
+}
+.event_card[for="popular-4"] {
+    background-image: url('https://i.ibb.co/x2zpVVD/image.png');
+}
+
+/* lainnya */
+.event_card[for="maret-1"] {
+    background-image: url('https://i.ibb.co/wrCrtsC/image.png');
+}
+.event_card[for="maret-2"] {
+    background-image: url('https://i.ibb.co/YLn1Jf8/image.png');
+}
+.event_card[for="maret-3"] {
     background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
 }
-.event_card[for="januari-2"] {
-    background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
-}
-.event_card[for="januari-3"] {
-    background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
-}
-.event_card[for="januari-4"] {
+.event_card[for="maret-4"] {
     background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
 }
 
-/* Desember */
-.event_card[for="desember-1"] {
+/* Juni */
+.event_card[for="juni-1"] {
+    background-image: url('https://i.ibb.co/wrCrtsC/image.png');
+}
+.event_card[for="juni-2"] {
+    background-image: url('https://i.ibb.co/RYgqq5x/image.png');
+}
+.event_card[for="juni-3"] {
     background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
 }
-.event_card[for="desember-2"] {
-    background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
-}
-.event_card[for="desember-3"] {
-    background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
-}
-.event_card[for="desember-4"] {
+.event_card[for="juni-4"] {
     background-image: url('https://i.ibb.co/XLPvDDH/tenun.jpg');
 }
