@@ -9,9 +9,11 @@
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/test.css">
+        <link rel="stylesheet" href="assets/css/slider.css">
 
         <title>Nawasena</title>
     </head>
+
     <body>
         <header class="header" id="header">
             <nav class="nav container">
@@ -45,13 +47,14 @@
 
         <main class="main">
             <section class="home" id="home">
-                <img src="assets/img/hills-mountains-covered-fog-gloomy-day (1).jpg" alt="" class="home__img">
-                <!-- <div class="home_shadow"></div> -->
-                <div class="home__container container grid">
+                <video id="video-file-1" autoplay muted loop>
+                    <source src="assets/video/wonderful-indonesia.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="home__container container grid" style="margin-top: -43rem;">
                     <div class="home__data">
                         <span class="home__data-subtitle">Nawasena</span>
                         <h1 class="home__data-title">Eksplorasi <br><b>Keindahan <br> Nusantara</b></h1>
-                        <a href="" class="button btn_utama">Baca Lebih Lanjut<i class="ri-arrow-right-line"></i></a>
                     </div>
                     <div class="home__info">
                         <div>
@@ -67,7 +70,7 @@
                 </div>
             </section>
 
-            <section class="discover section" id="discover">
+            <section class="discover section" id="discover" style="margin-top: 5rem;">
                 <h2 class="section__title">Pesona Nusantara</h2>
                 <div class="container">
                     <p class="pesona_description">
@@ -78,33 +81,42 @@
                 <div class="discover__container container swiper-container">
                     <div class="swiper-wrapper">
                         <div class="discover__card swiper-slide">
-                            <img src="https://i.ibb.co/ryrfcYG/9ac6118182d78eef77248519757e5378.jpg" alt="" class="discover__img">
+                            <img src="https://i.ibb.co/rkhn4Q6/da1df06bb9f492cbd99737b33a1464ea.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Suku Dayak</h2>
+                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Kalimantan</span>
+                            </div>
+                        </div>
+                        <div class="discover__card swiper-slide">
+                            <img src="https://i.ibb.co/hsHsF1v/ecf0295470236e52e4aa32709efd8e0c.jpg" alt="" class="discover__img">
                             <div class="discover__data">
                                 <h2 class="discover__title">Bali</h2>
                                 <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Indonesia</span>
                             </div>
                         </div>
                         <div class="discover__card swiper-slide">
-                            <img src="https://i.ibb.co/gRSfF3B/70a7c4eac31b2319b52fb71e3884bdff.jpg" alt="" class="discover__img">
+                            <img src="https://i.ibb.co/4m7Bpbh/36df62329b1df7aa7f1aeb0acdc6b22a.jpg" alt="" class="discover__img">
                             <div class="discover__data">
-                                <h2 class="discover__title">Bali</h2>
-                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Indonesia</span>
+                                <h2 class="discover__title">Suku Jawa</h2>
+                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Jawa Tengah</span>
                             </div>
                         </div>
                         <div class="discover__card swiper-slide">
-                            <img src="https://i.ibb.co/sgYyZpQ/Borobudur-Temple-Central-Java-Indonesia-circa-778-856.jpg" alt="" class="discover__img">
+                            <img src="https://i.ibb.co/Sn1vPBB/3da790d873099604edd1c5afaad740ea.jpg" alt="" class="discover__img">
                             <div class="discover__data">
-                                <h2 class="discover__title">Bali</h2>
-                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Indonesia</span>
+                                <h2 class="discover__title">Suku Papua</h2>
+                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Papua</span>
                             </div>
                         </div>
-                        <div class="discover__card swiper-slide">
-                            <img src="https://i.ibb.co/TKYmk6G/6f74d25c13f686e1e5555a93cece7409.jpg" alt="" class="discover__img">
-                            <div class="discover__data">
-                                <h2 class="discover__title">Bali</h2>
-                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Indonesia</span>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="tranding-slider-control">
+                        <div class="swiper-button-prev slider-arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M11.8284 12.0005L14.6569 14.8289L13.2426 16.2431L9 12.0005L13.2426 7.75781L14.6569 9.17203L11.8284 12.0005Z" fill="rgba(255,255,255,1)"></path></svg>   
+                       </div>
+                        <div class="swiper-button-next slider-arrow">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path d="M12.1717 12.0005L9.34326 9.17203L10.7575 7.75781L15.0001 12.0005L10.7575 16.2431L9.34326 14.8289L12.1717 12.0005Z" fill="rgba(255,255,255,1)"></path></svg>   
+                       </div>
+                       <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -119,16 +131,16 @@
                     <div class="experience__container container grid">
                         <div class="experience__img grid">
                             <div class="experience__overlay">
-                                <img src="assets/img/boro.jpeg" alt="" class="experience__img-one">
+                                <img src="http://www.earthismysterious.com/wp-content/uploads/2020/05/9d341-borobudur-860x484.png" alt="" class="experience__img-one">
                             </div>
                             <div class="experience__overlay">
-                                <img src="https://i.ibb.co/qx1VtwH/lempuyang.jpg" alt="" class="experience__img-two">
+                                <img src="assets/img/pembatik.jpeg" alt="" class="experience__img-two">
                             </div>
                         </div>
                     </div>
                         <div class="video__content">
                             <video id="video-file">
-                                <source src="assets/video/wonderful-indonesia.mp4" type="video/mp4">
+                                <source src="assets/video/wonderful-indonesia.MP4" type="video/mp4">
                             </video>
                             <button class="button btn-video button--flex video__button" id="video-button">
                                 <i class="ri-play-line video__button-icon" id="video-icon"></i>
@@ -144,7 +156,7 @@
                         <p class="about__description">Perayaan unik masyarakat Bali yang menjadi bagian dari 
                             tradisi Hari Raya Nyepi atau Tahun Baru Saka Bali.
                         </p>
-                        <a href="#" class="button btn-event event">Read more<i class="ri-arrow-right-line"></i></a>
+                        <a href="explore.html" class="button btn-event event">Read more<i class="ri-arrow-right-line"></i></a>
                     </div>
                     <div class="about__img">
                         <div class="about__img-overlay">
@@ -214,22 +226,21 @@
             <section class="explore section">
                 <div class="explore_container">
                    <div class="explore_image">
-                      <img src="https://i.ibb.co/pbDB7wg/batik.png" alt="batik mega mendung" class="explore_img">
-                      <div class="explore_shadow"></div>
+                      <img src="assets/img/peta.png" alt="Peta Nusantara" class="explore_img">
                    </div>
                    <div class="explore_content container grid">
                       <div class="explore_data">
-                         <h2 class="explore_title">Batik Mega Mendung</h2>
-                         <p class="explore_description">
+                         <h2 class="explore_title">Peta Nusantara</h2>
+                         <!-- <p class="explore_description">
                             Salah satu jenis batik yang terkenal dan berasal dari daerah Cirebon, Jawa Barat, Indonesia. Batik ini memiliki karakteristik motif yang khas, yaitu motif awan dan langit yang membentuk pola mendung
-                         </p>
+                         </p> -->
                       </div>
                    </div>
                 </div>
              </section>
 
 
-            <section class="place section" id="place">
+            <!-- <section class="place section" id="place">
                 <h2 class="section__title">Testing</h2>
 
                 <div class="place__container container grid">
@@ -293,21 +304,48 @@
                                 <h3 class="place__title">Tari Mpaa Lenggogo</h3>
                             </div>
                         </div>
-
+                        
                         <button class="button button--flex place__button">
                             <i class="ri-arrow-right-line"></i>
                         </button>
                     </div>
                 </div>
-            </section>
-
-             <!-- <section class="popular section">
-                <h2 class="section__title">Warisan <br>Budaya Indonesia</h2>
+            </section> -->
+            
+            <section class="popular section">
+                <div class="about__container explore-cont container grid">
+                    <h2 class="explore_title">Explore</h2>
+                    <a href="explore.html" class="btn-exp">Mulai Menjelajah<i class="ri-arrow-right-line"></i></a>
+                </div>
+                <!-- <h2 class="title_explore">Explore</h2> -->
                 <div class="popular_container container grid">
                    <article class="popular_card">
                       <div class="popular_image">
+                         <img src="https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg" alt="turonggo yakso" class="popular_img">
+                      </div>
+                      <a href="">
+                         <h2 class="popular_title">Turonggo Yakso</h2>
+                      </a>
+                      <div class="popular_location">
+                         <i class="ri-map-pin-line"></i>
+                         <span>Trenggalek, Jawa Timur</span>
+                      </div>
+                   </article>
+                   <article class="popular_card">
+                      <div class="popular_image">
+                         <img src="https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg" alt="tari jaipong" class="popular_img">
+                      </div>
+                      <a href="">
+                         <h2 class="popular_title">Tari Jaipong</h2>
+                      </a>
+                      <div class="popular_location">
+                         <i class="ri-map-pin-line"></i>
+                         <span>Jawa Barat</span>
+                      </div>
+                   </article>
+                   <article class="popular_card">
+                      <div class="popular_image">
                          <img src="https://i.ibb.co/RN0cMfj/karapan-sapi.jpg" alt="karapan sapi" class="popular_img">
-                         <div class="popular_shadow"></div>
                       </div>
                       <a href="">
                          <h2 class="popular_title">Karapan Sapi</h2>
@@ -319,32 +357,18 @@
                    </article>
                    <article class="popular_card">
                       <div class="popular_image">
-                         <img src="https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg" alt="turonggo yakso" class="popular_img">
-                         <div class="popular_shadow"></div>
+                         <img src="https://i.ibb.co/JRpFsK7/image.png" alt="candi singosari" class="popular_img">
                       </div>
                       <a href="">
-                         <h2 class="popular_title">Tari Turonggo Yakso</h2>
+                         <h2 class="popular_title">Candi Singosari</h2>
                       </a>
                       <div class="popular_location">
                          <i class="ri-map-pin-line"></i>
-                         <span>Trenggalek, Jawa Timur</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/JBH7WRz/ngaben.jpg" alt="ngaben" class="popular_img">
-                         <div class="popular_shadow"></div>
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Upacara Ngaben</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Bali</span>
+                         <span>Malang, Jawa Timur</span>
                       </div>
                    </article>
                 </div>
-             </section> -->
+             </section>
 
             <!-- <section class="subscribe section">
                 <div class="subscribe__bg">
@@ -434,12 +458,58 @@
         </footer>
 
          <!--========== SCROLL UP ==========-->
-        <!-- <a href="#" class="scrollup" id="scroll-up">
+        <a href="" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
-        </a> -->
+        </a>
 
         <script src="assets/js/scrollreveal.min.js"></script>
         <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
+        
+<script>
+    var video = document.getElementById("video-file-1");
+
+    // Mendapatkan posisi awal video
+    var videoOffsetTop = video.offsetTop;
+
+    // Mendapatkan tinggi layar
+    var windowHeight = window.innerHeight;
+
+    // Mendeteksi peristiwa scroll
+    window.addEventListener("scroll", function() {
+        // Mendapatkan posisi scroll
+        var scrollPosition = window.scrollY || window.pageYOffset;
+
+        // Menghentikan video jika telah di-scroll melewati video
+        if (scrollPosition > videoOffsetTop + windowHeight || scrollPosition < videoOffsetTop) {
+            video.pause();
+        } else {
+            video.play();
+        }
+    });
+
+    var TrandingSlider = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+</script>
+
     </body>
 </html>

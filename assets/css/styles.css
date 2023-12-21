@@ -1,7 +1,7 @@
 @import "font.css";
 /* =============== VARIABLES CSS =============== */
 :root {
-  --header-height: 2.5rem;
+  --header-height: 3rem;
 
   /*========== Colors ==========*/
   /* Change favorite color to match images */
@@ -182,12 +182,22 @@ input {
   margin-bottom: var(--mb-2);
 }
 
-.title_event {
+.explore_title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+}
+
+.title_explore {
   font-size: var(--h2-font-size);
   color: var(--title-color);
   text-align: center;
 }
 
+.title_event {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  text-align: center;
+}
 
 .container {
   max-width: 1120px;
@@ -451,7 +461,7 @@ input {
 }
 
 .button:hover {
-  background-color: var(--first-color-alt);
+  background-color: var(--container-color);
 }
 
 .button--flex {
@@ -545,11 +555,6 @@ input {
 
 .discover__img:hover {
   transform: var(--img-scale);
-}
-
-.swiper-container-3d .swiper-slide-shadow-left,
-.swiper-container-3d .swiper-slide-shadow-right {
-  background-image: none;
 }
 
 /*=============== EXPERIENCE ===============*/
@@ -830,11 +835,12 @@ input {
 
 /*========== SCROLL UP ==========*/
 .scrollup {
+  border-radius: 2rem;
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
-  padding: .5rem;
+  background-color: #252525;
+  padding: 0.8rem;
   display: flex;
   opacity: .9;
   z-index: var(--z-tooltip);
@@ -842,13 +848,18 @@ input {
 }
 
 .scrollup:hover {
-  background-color: var(--first-color-alt);
+  background-color: #151515;
   opacity: 1;
 }
 
 .scrollup__icon {
   color: var(--white-color);
   font-size: 1.2rem;
+  transition: transform 0.4s ease;
+}
+
+.scrollup:hover .scrollup__icon {
+  transform: translateY(-0.3rem);
 }
 
 /* Show scroll */
@@ -977,6 +988,7 @@ input {
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
+    /* justify-content: center; */
     align-items: center;
   }
   .about__data, .about__title {
@@ -1057,7 +1069,7 @@ input {
     width: 237px;
   }
   .discover__container {
-    width: 700px;
+    width: 800px;
   }
   .discover__data {
     left: 1.5rem;

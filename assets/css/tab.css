@@ -19,12 +19,12 @@
 
 @media screen and (min-width: 1152px) {
     .tab-filter-item-container {
-        height: 148rem !important;
+        height: 130rem !important;
     }
 }
 @media screen and (min-width: 1023px) {
     .tab-filter-item-container {
-        height: 148rem !important;
+        height: 130rem !important;
     }
 }
 
