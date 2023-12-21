@@ -423,6 +423,44 @@
       margin: 0.5rem;
     }
   }
+
+.send{
+  background-color: transparent; 
+  margin-left: 1rem; 
+  border: 2px solid #333; 
+  padding: 10px 15px; 
+  cursor: pointer; 
+  font-size: 24px; 
+  color: #ffffff;
+}
+
+#search-form{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;
+}
+
+#notification {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 150px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  z-index: 1000;
+}
+
+#notification i {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
   
 @media screen and (min-width: 1024px) {
   /* .jumbotron {
@@ -435,7 +473,7 @@
     position: relative;
   } */
   .about_title {
-    margin-top: rem;
+    margin-top: 3rem;
     font-size: var(--h3-font-size);
 }
 }

@@ -3,13 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <script src="https://kit.fontawesome.com/3ef597ef79.js" crossorigin="anonymous"></script>
         <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/content.css">
-
+        
         <title>BudayaKu</title>
     </head>
 <body>
@@ -245,9 +245,12 @@
                         <p class="subscribe__description">
                             Kirim cerita kebudayaan dari daerah anda
                         </p>
-                        <div id="search-form" style="align-items: center; text-align: center;">
+                        <form id="search-form" autocomplete="off">
                             <input type="search" id="search-input" placeholder="Send"/>
-                          </div>
+                            <button title="s" class="send" type="button">
+                              <i class="fa-regular fa-paper-plane"></i>
+                            </button>
+                          </form>                      
                     </div>
                 </div>
             </section>
@@ -319,6 +322,8 @@
                 </div>
             </div>
         </footer>
+        <!--========== POP UP NOTIF ==========-->
+        <div id="notification"></div>
 
          <!--========== SCROLL UP ==========-->
         <a href="" class="scrollup" id="scroll-up">
@@ -330,6 +335,75 @@
         <script src="assets/js/main.js"></script>
         
 <script>
+    //btn back-to-top
+    document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("scroll-up");
+
+            if (button) {
+                button.style.display = "none";
+
+                window.addEventListener("scroll", function () {
+                    scrollFunction();
+                });
+
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    backToTop();
+                });
+            }
+
+            function scrollFunction() {
+                let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            }
+
+            function backToTop() {
+                setTimeout(function () {
+                    window.requestAnimationFrame(function () {
+                        document.documentElement.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                }, 300);
+            }
+        });
+        
+        //pop up notification
+        document.addEventListener('DOMContentLoaded', function () {
+            var sendButton = document.querySelector('.send');
+            var notificationDiv = document.getElementById('notification');
+            var searchInput = document.getElementById('search-input');
+
+            sendButton.addEventListener('click', function () {
+                var inputText = searchInput.value.trim();
+
+                if (inputText !== '') {
+                var newNotification = document.createElement('div');
+                newNotification.className = 'notification';
+                newNotification.innerHTML = '<i class="fa-regular fa-paper-plane"></i> Pesan Terkirim!';
+
+                notificationDiv.appendChild(newNotification);
+                notificationDiv.style.display = 'block';
+
+                searchInput.value = '';
+
+                setTimeout(function () {
+                    notificationDiv.removeChild(newNotification);
+                    notificationDiv.style.display = 'none';
+                }, 3000);
+                }
+            });
+
+            searchInput.addEventListener('input', function () {
+                sendButton.disabled = searchInput.value.trim() === '';
+            });
+        });
     // var video = document.getElementById("video-file-1");
     // var videoOffsetTop = video.offsetTop;
     // var windowHeight = window.innerHeight;
