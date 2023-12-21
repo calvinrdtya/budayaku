@@ -10,16 +10,6 @@
     z-index: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  .home_shadow {
-      display: none; 
-  }
-  /* .home__info {
-    margin-top: -20rem !important;
-  } */
-}
-
-
 .pesona_description {
     text-align: center;
     margin-bottom: var(--mb-2-5);

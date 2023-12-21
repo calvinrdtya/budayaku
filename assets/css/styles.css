@@ -359,7 +359,6 @@ input {
 }
 
 .home__container {
-  margin-top: -8rem;
   position: relative;
   height: calc(100vh - var(--header-height));
   align-content: center;
