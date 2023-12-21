@@ -341,6 +341,43 @@
         <script src="assets/js/main.js"></script>
         
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("scroll-up");
+
+            if (button) {
+                button.style.display = "none";
+
+                window.addEventListener("scroll", function () {
+                    scrollFunction();
+                });
+
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    backToTop();
+                });
+            }
+
+            function scrollFunction() {
+                let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            }
+
+            function backToTop() {
+                setTimeout(function () {
+                    window.requestAnimationFrame(function () {
+                        document.documentElement.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                }, 300);
+            }
+        });
     // var video = document.getElementById("video-file-1");
     // var videoOffsetTop = video.offsetTop;
     // var windowHeight = window.innerHeight;
