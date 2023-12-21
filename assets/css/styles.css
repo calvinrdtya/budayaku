@@ -375,7 +375,6 @@ input {
 .home__data-subtitle {
   display: block;
   font-weight: var(--font-semi-bold);
-  /* margin-bottom: var(--mb-0-75); */
 }
 
 .home__data-title {
@@ -396,7 +395,6 @@ input {
 }
 
 .home__info {
-  /* background-color: var(--var-color); */
   background-color: hsla(0, 0%, 0%, .3);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -991,21 +989,6 @@ input {
     align-self: flex-end;
     margin-bottom: 3rem;
     column-gap: 2.5rem;
-  }
-  .home__info {
-    background-color: hsla(0, 0%, 0%, .3);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    display: flex;
-    padding: 0.7rem;
-    align-items: center;
-    column-gap: .5rem;
-    position: absolute;
-    right: 0;
-    bottom: 1rem;
-    width: 228px;
-    z-index: 2;
-    bottom: 3rem;
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
