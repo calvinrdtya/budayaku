@@ -7,7 +7,18 @@
     width: 100%;
     height: 800px;
     background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 58%, hsl(0, 0%, 0%) 73%);
+    z-index: 1;
 }
+
+@media only screen and (max-width: 600px) {
+  .home_shadow {
+      display: none; 
+  }
+  /* .home__info {
+    margin-top: -20rem !important;
+  } */
+}
+
 
 .pesona_description {
     text-align: center;

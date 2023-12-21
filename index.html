@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png"> -->
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -17,8 +17,9 @@
     <body>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav_logo">BudayaKita</a>
-
+                <a href="index.html" class="nav_logo">
+                    <img src="assets/img/logo1.png" alt="logo" width="50%">
+                </a>
                 <div class="nav_menu" id="nav-menu">
                     <ul class="nav_list">
                         <li class="nav_item">
@@ -35,7 +36,6 @@
                         <span class="change-theme-name">Dark mode</span>
                         <i class="ri-moon-line change-theme" id="theme-button"></i>
                     </div> -->
-
                     <i class="ri-close-line nav_close" id="nav-close"></i>
                 </div>
 
@@ -46,15 +46,16 @@
         </header>
 
         <main class="main">
-            <section class="home" id="home">
+            <section class="home" id="home" style="z-index: 1;">
                 <video id="video-file-1" autoplay muted loop>
-                    <source src="assets/video/wonderful-indonesia.MP4" type="video/mp4">
+                    <source src="assets/video/home1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <div class="home__container container grid" style="margin-top: -43rem;">
+                <div class="home_shadow"></div>
+                <div class="home__container container grid">
                     <div class="home__data">
-                        <span class="home__data-subtitle">Nawasena</span>
-                        <h1 class="home__data-title">Eksplorasi <br><b>Keindahan <br> Nusantara</b></h1>
+                        <span class="home__data-subtitle" style="font-size: var(--h2-font-size);">Menjelajahi</span>
+                        <h1 class="home__data-title"><b>Keberagaman dan<br> Kekayaan Budaya</b> <br> Nusantara</h1>
                     </div>
                     <div class="home__info">
                         <div>
@@ -70,9 +71,9 @@
                 </div>
             </section>
 
-            <section class="discover section" id="discover" style="margin-top: 5rem;">
-                <h2 class="section__title">Pesona Nusantara</h2>
-                <div class="container">
+            <section class="discover section" id="discover">
+                <div class="container teks">
+                    <h2 class="section__title">Pesona Nusantara</h2>
                     <p class="pesona_description">
                         Kekayaan sejati tidak hanya terletak pada harta dan materi, tapi juga dalam keberagaman budaya yang kita warisi. 
                         Kebudayaan Indonesia adalah harta karun tak ternilai yang melibatkan warna, rasa, dan irama kehidupan.
@@ -88,10 +89,10 @@
                             </div>
                         </div>
                         <div class="discover__card swiper-slide">
-                            <img src="https://i.ibb.co/Sn1vPBB/3da790d873099604edd1c5afaad740ea.jpg" alt="" class="discover__img">
+                            <img src="https://i.ibb.co/qkQR9Zb/502e9cf5ba585dee82b5a08b78df21d4.jpg" alt="" class="discover__img">
                             <div class="discover__data">
-                                <h2 class="discover__title">Bali</h2>
-                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Indonesia</span>
+                                <h2 class="discover__title">Suku Bali</h2>
+                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Bali</span>
                             </div>
                         </div>
                         <div class="discover__card swiper-slide">
@@ -106,6 +107,13 @@
                             <div class="discover__data">
                                 <h2 class="discover__title">Suku Papua</h2>
                                 <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Papua</span>
+                            </div>
+                        </div>
+                        <div class="discover__card swiper-slide">
+                            <img src="https://i.ibb.co/X4q0qw2/b7fa3d827e0974c3cb917916aa9dcf3a.jpg" alt="" class="discover__img">
+                            <div class="discover__data">
+                                <h2 class="discover__title">Suku Baduy</h2>
+                                <span class="discover__description"><i class="ri-map-pin-line mr-2"></i>Lebak, Banten</span>
                             </div>
                         </div>
                     </div>
@@ -179,9 +187,6 @@
                    <div class="explore_content container grid">
                       <div class="explore_data">
                          <h2 class="explore_title">Peta Nusantara</h2>
-                         <!-- <p class="explore_description">
-                            Salah satu jenis batik yang terkenal dan berasal dari daerah Cirebon, Jawa Barat, Indonesia. Batik ini memiliki karakteristik motif yang khas, yaitu motif awan dan langit yang membentuk pola mendung
-                         </p> -->
                       </div>
                    </div>
                 </div>
