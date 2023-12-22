@@ -601,16 +601,16 @@
 	margin-bottom: 20px;
 }
 
-.about {
+.about__ {
   display: flex;
   flex-direction: row;
 }
 
 @media screen and (max-width: 768px) {
-  .about {
+  .about__ {
     flex-direction: column;
   }
-  #waerebo .experience__container {
+  #waerebo .exp__ {
     order: 1;
   }
   #waerebo .about__data {

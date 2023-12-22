@@ -3,10 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/content.css">
 
@@ -33,13 +31,8 @@
                         <a href="about.html" class="nav_link active-link">About Us</a>
                     </li>
                 </ul>
-                <!-- <div class="nav_dark">
-                    <span class="change-theme-name">Dark mode</span>
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-                </div> -->
                 <i class="ri-close-line nav_close" id="nav-close"></i>
             </div>
-
             <div class="nav_toggle" id="nav-toggle">
                 <i class="ri-function-line"></i>
             </div>
@@ -170,12 +163,6 @@
                         </div>
                     </div>
                 </section>
-
-      
-
-           
-
-        
         </main>
 
 
@@ -195,10 +182,10 @@
                                 <a href="explore.html" class="footer__link">Explore</a>
                             </li>
                             <li class="footer__item">
-                                <a href="explore.html" class="footer__link">Event</a>
+                                <a href="event.html#event" class="footer__link">Event</a>
                             </li>
                             <li class="footer__item">
-                                <a href="explore.html" class="footer__link">Rekomendasi</a>
+                                <a href="event.html" class="footer__link">Rekomendasi</a>
                             </li>
                         </ul>
                     </div>
@@ -206,13 +193,13 @@
                         <h3 class="footer__subtitle">About</h3>
                         <ul>
                             <li class="footer__item">
-                                <a href="index.html" class="footer__link">Warisan</a>
+                                <a href="index.html#warisan" class="footer__link">Warisan</a>
                             </li>
                             <li class="footer__item">
-                                <a href="index.html" class="footer__link">Nusantara</a>
+                                <a href="index.html#nusantara" class="footer__link">Nusantara</a>
                             </li>
                             <li class="footer__item">
-                                <a href="#about_budayaku" class="footer__link">About BudayaKu</a>
+                                <a href="#" class="footer__link" id="about-link">About BudayaKu</a>
                             </li>
                         </ul>
                     </div>
@@ -244,13 +231,66 @@
             </div>
         </footer>
 
-        <a href="" class="scrollup" id="scroll-up">
-            <i class="ri-arrow-up-line scrollup__icon"></i>
-        </a>
-
-        <script src="assets/js/scrollreveal.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
-        <script src="assets/js/main.js"></script>
+    <!--========== SCROLL UP ==========-->
+    <a href="" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
         
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+            let button = document.getElementById("scroll-up");
+
+            if (button) {
+                button.style.display = "none";
+
+                window.addEventListener("scroll", function () {
+                    scrollFunction();
+                });
+
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    backToTop();
+                });
+            }
+
+            function scrollFunction() {
+                let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+                if (scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            }
+
+            function backToTop() {
+                setTimeout(function () {
+                    window.requestAnimationFrame(function () {
+                        document.documentElement.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                }, 300);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        var aboutLink = document.getElementById("about-link");
+
+        if (aboutLink) {
+            aboutLink.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                document.documentElement.scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        }
+    });
+</script>
     </body>
 </html>

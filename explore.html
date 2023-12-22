@@ -321,10 +321,6 @@
                         <a href="about.html" class="nav_link">About Us</a>
                     </li>
                 </ul>
-                <!-- <div class="nav_dark">
-                    <span class="change-theme-name">Dark mode</span>
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-                </div> -->
                 <i class="ri-close-line nav_close" id="nav-close"></i>
             </div>
 
@@ -368,13 +364,13 @@
                     <h3 class="footer__subtitle">What to See</h3>
                     <ul>
                         <li class="footer__item">
-                            <a href="explore.html" class="footer__link">Explore</a>
+                            <a href="#" class="footer__link" id="explore-link">Explore</a>
                         </li>
                         <li class="footer__item">
-                            <a href="explore.html" class="footer__link">Event</a>
+                            <a href="event.html#event" class="footer__link">Event</a>
                         </li>
                         <li class="footer__item">
-                            <a href="explore.html" class="footer__link">Rekomendasi</a>
+                            <a href="event.html" class="footer__link">Rekomendasi</a>
                         </li>
                     </ul>
                 </div>
@@ -382,10 +378,10 @@
                     <h3 class="footer__subtitle">About</h3>
                     <ul>
                         <li class="footer__item">
-                            <a href="#warisan" class="footer__link">Warisan</a>
+                            <a href="index.html#warisan" class="footer__link">Warisan</a>
                         </li>
                         <li class="footer__item">
-                            <a href="#nusantara" class="footer__link">Nusantara</a>
+                            <a href="index.html#nusantara" class="footer__link">Nusantara</a>
                         </li>
                         <li class="footer__item">
                             <a href="about.html" class="footer__link">About BudayaKu</a>
@@ -428,10 +424,8 @@
                 </div>
              </div>
 
-       <script src="assets/js/scrollreveal.min.js"></script>
-       <script src="assets/js/swiper-bundle.min.js"></script>
+       <script src="assets/js/scrollreveal.min.js"></script>      
        <script src="assets/js/main.js"></script>
-       <script src="assets/js/tab.js"></script>
        <script src="assets/js/data_explore.js"></script>
 
         <script type="text/javascript">
@@ -788,30 +782,6 @@ function filterExplore(value) {
     });
 }
 
-//search without enter
-// document.getElementById("search-input").addEventListener("input", () => {
-//          filterBySearch();
-//      });
-
-//      function filterBySearch() {
-//          let searchInput = document.getElementById("search-input").value.trim().toUpperCase();
-//          let elements = document.querySelectorAll(".popular_card");
-
-//          elements.forEach((element) => {
-//              let title = element.querySelector(".popular_title").innerText.toUpperCase();
-//              let category = element.classList[1].toUpperCase();
-//              let location = element.querySelector(".popular_location span").innerText.toUpperCase();
-
-//              let additionalContent = title + " " + category + " " + location;
-
-//              if (searchInput === "" || additionalContent.includes(searchInput)) {
-//                  element.classList.remove("hide");
-//              } else {
-//                  element.classList.add("hide");
-//              }
-//          });
-//      }
-
 document.getElementById("search-input").addEventListener("input", (event) => {
    if (event.key === "Enter") {
       filterBySearch();
@@ -872,6 +842,19 @@ function filterBySearch(searchInput) {
     document.head.appendChild(style);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+        var exploreLink = document.getElementById("explore-link");
+
+        if (exploreLink) {
+            exploreLink.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                document.querySelector("#explore").scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        }
+    });
     </script>
   </body>
 </html>
