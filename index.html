@@ -3,15 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/3ef597ef79.js" crossorigin="anonymous"></script>
+        
         <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/content.css">
         <title>BudayaKu</title>
+        
     </head>
 <body>
+
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="index.html" class="nav_logo">
@@ -34,7 +36,6 @@
                     </ul>
                     <i class="ri-close-line nav_close" id="nav-close"></i>
                 </div>
-
                 <div class="nav_toggle" id="nav-toggle">
                     <i class="ri-function-line"></i>
                 </div>
@@ -121,7 +122,8 @@
                 <div class="about__container container grid exp_content">
                     <h2 class="section__title">Warisan Budaya Indonesia</h2>
                     <p class="exp_description"> Kekayaan sejati tidak hanya terletak pada harta dan materi, tapi juga dalam keberagaman budaya yang kita warisi. 
-                        Kebudayaan Indonesia adalah harta karun tak ternilai yang melibatkan warna, rasa, dan irama kehidupan.</p>
+                        Kebudayaan Indonesia adalah harta karun tak ternilai yang melibatkan warna, rasa, dan irama kehidupan.
+                    </p>
                 </div>
                 <div class="about__container container grid">
                     <div class="experience__container container grid">
@@ -185,54 +187,7 @@
                     <a href="explore.html" class="btn-exp">Mulai Menjelajah<i class="ri-arrow-right-line"></i></a>
                 </div>
                 <div class="popular_container container grid">
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg" alt="turonggo yakso" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Turonggo Yakso</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Trenggalek, Jawa Timur</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg" alt="tari jaipong" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Tari Jaipong</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Jawa Barat</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/RN0cMfj/karapan-sapi.jpg" alt="karapan sapi" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Karapan Sapi</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Madura</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/JRpFsK7/image.png" alt="candi singosari" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Candi Singosari</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Malang, Jawa Timur</span>
-                      </div>
-                   </article>
+                    <div id="explorer" style="cursor: pointer;"></div>
                 </div>
              </section>
 
@@ -319,12 +274,21 @@
             </div>
         </footer>
 
+        <div class="modal-container" id="modal-container">
+            <div class="modal-inner">
+                <div class="btn-close" onclick="closeModal(event)">
+                    <ion-icon name="close-outline"></ion-icon>
+                </div>
+            </div>
+         </div>
+
         <div id="notification"></div>
 
         <a href="" class="scrollup" id="scroll-up">
             <i class="ri-arrow-up-line scrollup__icon"></i>
         </a>
 
+        <script src="https://kit.fontawesome.com/3ef597ef79.js" crossorigin="anonymous"></script>
         <script src="assets/js/scrollreveal.min.js"></script>
         <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
@@ -397,6 +361,157 @@
                 sendButton.disabled = searchInput.value.trim() === '';
             });
         });
+        </script>
+
+        <script>
+            let explorer = {
+    data: [
+            {
+                category: "Tari",
+                image: "https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg",
+                name: "Turonggo Yakso",
+                location: "Trenggalek, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Tari Turonggo Yakso, berasal dari Trenggalek, Jawa Timur, adalah perwujudan kekayaan budaya dan tradisi masyarakat lokal. Dipentaskan dalam berbagai konteks seperti upacara adat, seni, dan perayaan kebudayaan, tarian ini mengekspresikan keindahan khas Jawa Timur melalui gerakan lincah, ekspresi tangan yang indah, dan musik pengiring yang melibatkan kekayaan tradisional wilayah tersebut.</p> <br> <p style='text-indent: 45px';>Selain menjadi hiburan, Tari Turonggo Yakso berfungsi sebagai sarana untuk melestarikan dan memperkenalkan kekayaan budaya Jawa Timur kepada masyarakat, menjadikannya bagian yang tak terpisahkan dari warisan budaya yang dijaga dan dihargai oleh masyarakat Trenggalek.</p>",
+            },
+            {
+                category: "Acara",
+                image: "https://i.ibb.co/RN0cMfj/karapan-sapi.jpg",
+                name: "Karapan Sapi",
+                location: "Madura, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Kerapan Sapi Madura adalah tradisi unik di Pulau Madura, Indonesia, yang menggabungkan keterampilan mengendarai kerbau dengan kompetisi kecepatan. Dalam perhelatan ini, sepasang kerbau yang dihias dan dikendarai oleh seorang pengendara bersaing untuk mencapai garis finish tercepat di lintasan tanah. Para pengendara, yang disebut 'jawara' menunjukkan keahlian mengendalikan kerbaunya sambil berlomba untuk meraih kemenangan.</p><br></p>",
+            },
+            {
+                category: "Tari",
+                image: "https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg",
+                name: "Tari Jaipong",
+                location: "Jawa Barat",
+                pageContent: "<p style='text-indent: 45px;'>Tari Jaipong adalah tarian tradisional yang berasal dari Jawa Barat, Indonesia. Tarian ini diilhami oleh kekayaan seni dan budaya Sunda, menggabungkan gerakan tari tradisional dengan unsur-unsur modern. Jaipong mengutamakan gerakan tubuh yang dinamis, ekspressif, dan penuh semangat, seringkali disertai dengan irama musik yang khas.</p><br><p style='text-indent: 45px;'>Tari Jaipong awalnya dikembangkan oleh seniman Gugum Gumbira pada tahun 1960-an sebagai bentuk seni rakyat yang menggabungkan elemen tarian tradisional dengan musik modern. Kini, Jaipong menjadi populer di berbagai pertunjukan seni dan acara kebudayaan di Indonesia, serta menjadi bagian yang integral dalam pelestarian dan pengembangan warisan seni tradisional Sunda.</p>",
+            },
+            {
+                category: "Candi",
+                image: "https://i.ibb.co/JRpFsK7/image.png",
+                name: "Candi Singosari",
+                location: "Malang, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Candi Singosari adalah kompleks candi yang terletak di Desa Candirenggo, Kecamatan Singosari, Kabupaten Malang, Jawa Timur, Indonesia. Candi ini berasal dari masa Kerajaan Singosari pada abad ke-13 dan dianggap sebagai peninggalan sejarah yang penting.</p><br><p style='text-indent: 45px;'>Candi Singosari terdiri dari beberapa candi kecil yang saling berdekatan, termasuk Candi Singosari, Candi Jago, dan Candi Kidal. Candi-candi ini mencerminkan gaya arsitektur candi Hindu, dengan relief-relief yang menggambarkan adegan-kehidupan sehari-hari, tokoh-tokoh epik, dan ajaran-ajaran agama Hindu.</p>",
+            },
+    ],
+};
+
+let popularContainer = document.createElement("div");
+popularContainer.classList.add("popular_container", "container", "grid");
+
+document.getElementById("explorer").appendChild(popularContainer);
+
+for (let i of explorer.data) {
+   let article = document.createElement("article");
+   article.classList.add("popular_card", i.category.toLowerCase());
+
+   let linkArticle = document.createElement("a");
+   article.setAttribute("data-item", JSON.stringify(i));
+   linkArticle.addEventListener("click", () => openModal(i));
+
+   let imgContainer = document.createElement("div");
+   imgContainer.classList.add("popular_image");
+
+   let image = document.createElement("img");
+   image.setAttribute("src", i.image);
+   image.classList.add("popular_img");
+
+   image.style.maxWidth = "100%";
+   image.style.height = "auto";
+   image.style.width = "300px";
+
+   let shadow = document.createElement("div");
+   shadow.classList.add("popular_shadow");
+
+   imgContainer.appendChild(image);
+   imgContainer.appendChild(shadow);
+
+   linkArticle.appendChild(imgContainer);
+   article.appendChild(linkArticle);
+
+   let title = document.createElement("h2");
+   title.classList.add("popular_title");
+   title.innerText = i.name;
+
+   title.addEventListener("click", () => openModal(i));
+
+   article.appendChild(title);
+
+   let location = document.createElement("div");
+   location.classList.add("popular_location");
+
+   let mapPinIcon = document.createElement("i");
+   mapPinIcon.classList.add("ri-map-pin-line");
+
+   let locationSpan = document.createElement("span");
+   locationSpan.innerText = i.location;
+
+   location.appendChild(mapPinIcon);
+   location.appendChild(locationSpan);
+
+   article.appendChild(location);
+   popularContainer.appendChild(article);
+}
+
+function openModal(item) {
+   console.log("Opening modal for item:", item);
+
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.innerHTML = ""; 
+
+   let modal = document.createElement("div");
+   modal.classList.add("modal");
+
+   let closeModalButton = document.createElement("span");
+   closeModalButton.classList.add("close-modal");
+   closeModalButton.innerHTML = "&times;";
+   closeModalButton.addEventListener("click", () => closeModal());
+
+   let modalContent = document.createElement("div");
+   modalContent.classList.add("modal-content");
+
+   modalContent.innerHTML = `
+      <div class="modal-image">
+            <img src="${item.image}" alt="${item.name}" class="modal-img">
+      </div>
+      <div class="modal-description">
+            <h2>${item.name}</h2>
+            <p>${item.pageContent}</p>
+      </div>
+   `;
+
+   modal.appendChild(closeModalButton);
+   modal.appendChild(modalContent);
+   modalContainer.appendChild(modal);
+
+   modalContainer.classList.add("active-modal");
+}
+
+function closeModal() {
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.classList.remove("active-modal");
+   document.body.style.overflow = "auto";
+   event.preventDefault();
+}
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+    closeModal();
+    }
+});
+
+let article = document.createElement("article");
+article.classList.add("popular_card", i.category.toLowerCase());
+article.setAttribute("data-item", JSON.stringify(i));
+
+article.addEventListener("click", () => openModal(i));
+
+function closeModal() {
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.classList.remove("active-modal");
+   document.body.style.overflow = "auto";
+   event.preventDefault();
+}
         </script>
     </body>
 </html>
