@@ -32,10 +32,6 @@
                             <a href="about.html" class="nav_link">About Us</a>
                         </li>
                     </ul>
-                    <!-- <div class="nav_dark">
-                        <span class="change-theme-name">Dark mode</span>
-                        <i class="ri-moon-line change-theme" id="theme-button"></i>
-                    </div> -->
                     <i class="ri-close-line nav_close" id="nav-close"></i>
                 </div>
 
@@ -253,12 +249,10 @@
                               <i class="fa-regular fa-paper-plane"></i>
                             </button>
                           </form>                      
+                        </div>
                     </div>
-                </div>
-            </section>
-          
-        </main>
-
+                </section>
+            </main>
 
         <footer class="footer section">
             <div class="footer__container container grid">
@@ -324,6 +318,7 @@
                 </div>
             </div>
         </footer>
+        
         <!--========== POP UP NOTIF ==========-->
         <div id="notification"></div>
 
@@ -337,7 +332,6 @@
         <script src="assets/js/main.js"></script>
         
 <script>
-    //btn back-to-top
     document.addEventListener("DOMContentLoaded", function() {
             let button = document.getElementById("scroll-up");
 
@@ -376,7 +370,6 @@
             }
         });
         
-        //pop up notification
         document.addEventListener('DOMContentLoaded', function () {
             var sendButton = document.querySelector('.send');
             var notificationDiv = document.getElementById('notification');
@@ -406,43 +399,6 @@
                 sendButton.disabled = searchInput.value.trim() === '';
             });
         });
-    // var video = document.getElementById("video-file-1");
-    // var videoOffsetTop = video.offsetTop;
-    // var windowHeight = window.innerHeight;
-
-    // window.addEventListener("scroll", function() {
-    //     var scrollPosition = window.scrollY || window.pageYOffset;
-    //     if (scrollPosition > videoOffsetTop + windowHeight || scrollPosition < videoOffsetTop) {
-    //         video.pause();
-    //     } else {
-    //         video.play();
-    //     }
-    // });
-
-    // var TrandingSlider = new Swiper('.swiper-container', {
-    // effect: 'coverflow',
-    // grabCursor: true,
-    // centeredSlides: true,
-    // loop: true,
-    // slidesPerView: 'auto',
-    // coverflowEffect: {
-    //     rotate: 0,
-    //     stretch: 0,
-    //     depth: 100,
-    //     modifier: 1,
-    // },
-    // centerInsufficientSlides: true,
-    // pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    // },
-    // Hilangkan bagian navigasi berikut
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // }
-// });
-
         </script>
     </body>
 </html>
