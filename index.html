@@ -10,6 +10,291 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/content.css">
         <title>BudayaKu</title>
+        <style>
+            @media screen and (min-width: 1152px) {
+                .modal {
+                    position: relative;
+                    background: #00000091;
+                    backdrop-filter: blur(1rem);
+                    border-radius: 2rem;
+                    overflow: hidden;
+                    cursor: text;
+                }
+                .modal-content {
+                    display: flex;
+                    max-width: 70%;
+                    margin: 2rem auto;
+                    overflow: hidden;
+                }
+                .close-modal {
+                    position: absolute;
+                    top: 10px;
+                    right: 2rem;
+                    font-size: 24px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                .modal-container {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    padding: 4rem 0;
+                    width: 100%;
+                    height: 100%;
+                    max-height: max-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    clip-path: circle(0% at 50% 50%);
+                    z-index: 33;
+                    overflow: auto;
+                    background: var(--overlay);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .modal-container.active-modal {
+                    opacity: 1;
+                    visibility: visible;
+                    clip-path: polygon(30% 0%, 70% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .modal-inner {
+                    margin: auto;
+                    position: relative;
+                    max-width: 100%;
+                    width: auto;
+                    z-index: 100;
+                    display: grid;
+                    padding: 3rem;
+                    border-radius: 3rem;
+                    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+                    align-items: center;
+                    background: var(--modal-bg);
+                }
+                .btn-close {
+                    position: absolute;
+                    top: 2rem;
+                    right: 4rem;
+                    width: 3rem;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                }
+                .btn-close ion-icon {
+                    font-size: 2.5rem;
+                }
+                .modal-image {
+                    flex: 1;
+                    padding: 1rem;
+                }
+                .modal-description {
+                    flex: 1;
+                    padding: 1rem;
+                }
+                .modal-content img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 1rem;
+                }
+                .modal-description h2 {
+                    font-size: 2rem !important;
+                    margin-bottom: 1rem;
+                }
+            }
+            @media screen and (min-width: 1024px) {
+                .modal {
+                    position: relative;
+                    background: #00000091;
+                    backdrop-filter: blur(1rem);
+                    border-radius: 2rem;
+                    overflow: hidden;
+                    cursor: text;
+                }
+                .modal-content {
+                    display: flex;
+                    max-width: 70%;
+                    margin: 2rem auto;
+                    overflow: hidden;
+                }
+                .close-modal {
+                    position: absolute;
+                    top: 10px;
+                    right: 2rem;
+                    font-size: 24px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                .modal-container {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    padding: 4rem 0;
+                    width: 100%;
+                    height: 100%;
+                    max-height: max-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    clip-path: circle(0% at 50% 50%);
+                    z-index: 33;
+                    overflow: auto;
+                    background: var(--overlay);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .modal-container.active-modal {
+                    opacity: 1;
+                    visibility: visible;
+                    clip-path: polygon(30% 0%, 70% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .modal-inner {
+                    margin: auto;
+                    position: relative;
+                    max-width: 100%;
+                    width: auto;
+                    z-index: 100;
+                    display: grid;
+                    padding: 3rem;
+                    border-radius: 3rem;
+                    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+                    align-items: center;
+                    background: var(--modal-bg);
+                }
+                .btn-close {
+                    position: absolute;
+                    top: 2rem;
+                    right: 4rem;
+                    width: 3rem;
+                    height: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                }
+                .btn-close ion-icon {
+                    font-size: 2.5rem;
+                }
+                .modal-image {
+                    flex: 1;
+                    padding: 1rem;
+                }
+                .modal-description {
+                    flex: 1;
+                    padding: 1rem;
+                }
+                .modal-content img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 1rem;
+                }
+                .modal-description h2 {
+                    font-size: 2rem !important;
+                    margin-bottom: 1rem;
+                }
+            }
+            .modal {
+                position: relative;
+                background: #00000091;
+                backdrop-filter: blur(1rem);
+                border-radius: 2rem;
+                overflow: hidden;
+                cursor: text;
+            }
+            .modal-content {
+                max-width: 90%;
+                margin: 2rem auto;
+                overflow: hidden;
+            }
+            .close-modal {
+                position: absolute;
+                top: 10px;
+                right: 2rem;
+                font-size: 24px;
+                color: #fff;
+                cursor: pointer;
+            }
+            .modal-container {
+                position: fixed;
+                left: 0;
+                top: 0;
+                padding: 4rem 0;
+                width: 100%;
+                height: 100%;
+                max-height: max-content;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                visibility: hidden;
+                clip-path: circle(0% at 50% 50%);
+                z-index: 33;
+                overflow: auto;
+                background: var(--overlay);
+                transition: transform 0.3s ease-in-out;
+            }
+            .modal-container.active-modal {
+                opacity: 1;
+                visibility: visible;
+                clip-path: polygon(30% 0%, 70% 0, 100% 0, 100% 100%, 70% 100%, 30% 100%, 0 100%, 0 0);
+                transition: transform 0.3s ease-in-out;
+            }
+            .modal-inner {
+                margin: auto;
+                position: relative;
+                max-width: 100%;
+                width: auto;
+                z-index: 100;
+                display: grid;
+                padding: 3rem;
+                border-radius: 3rem;
+                grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+                align-items: center;
+                background: var(--modal-bg);
+            }
+            .btn-close {
+                position: absolute;
+                top: 2rem;
+                right: 4rem;
+                width: 3rem;
+                height: 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 1rem;
+                cursor: pointer;
+            }
+            .btn-close ion-icon {
+                font-size: 2.5rem;
+            }
+            .modal-image {
+                flex: 1;
+                padding: 1rem;
+            }
+            .modal-description {
+                flex: 1;
+                padding: 1rem;
+            }
+            .modal-content img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 1rem;
+            }
+            .modal-description h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            .modal-description p {
+                color: var(--first-color-secondary);
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+          </style>
     </head>
 <body>
         <header class="header" id="header">
@@ -185,54 +470,7 @@
                     <a href="explore.html" class="btn-exp">Mulai Menjelajah<i class="ri-arrow-right-line"></i></a>
                 </div>
                 <div class="popular_container container grid">
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg" alt="turonggo yakso" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Turonggo Yakso</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Trenggalek, Jawa Timur</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg" alt="tari jaipong" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Tari Jaipong</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Jawa Barat</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/RN0cMfj/karapan-sapi.jpg" alt="karapan sapi" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Karapan Sapi</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Madura</span>
-                      </div>
-                   </article>
-                   <article class="popular_card">
-                      <div class="popular_image">
-                         <img src="https://i.ibb.co/JRpFsK7/image.png" alt="candi singosari" class="popular_img">
-                      </div>
-                      <a href="">
-                         <h2 class="popular_title">Candi Singosari</h2>
-                      </a>
-                      <div class="popular_location">
-                         <i class="ri-map-pin-line"></i>
-                         <span>Malang, Jawa Timur</span>
-                      </div>
-                   </article>
+                    <div id="explorer" style="cursor: pointer;"></div>
                 </div>
              </section>
 
@@ -272,7 +510,7 @@
                                 <a href="explore.html" class="footer__link">Explore</a>
                             </li>
                             <li class="footer__item">
-                                <a href="event.html" class="footer__link">Event</a>
+                                <a href="event.html#event" class="footer__link">Event</a>
                             </li>
                             <li class="footer__item">
                                 <a href="event.html" class="footer__link">Rekomendasi</a>
@@ -320,6 +558,14 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal-container" id="modal-container">
+            <div class="modal-inner">
+            <div class="btn-close" onclick="closeModal(event)">
+               <ion-icon name="close-outline"></ion-icon>
+            </div>
+            </div>
+         </div>
         <!--========== POP UP NOTIF ==========-->
         <div id="notification"></div>
 
@@ -402,6 +648,157 @@
                 sendButton.disabled = searchInput.value.trim() === '';
             });
         });
+        </script>
+
+        <script>
+            let explorer = {
+    data: [
+            {
+                category: "Tari",
+                image: "https://i.ibb.co/4WSdb5Z/turonggo-yakso.jpg",
+                name: "Turonggo Yakso",
+                location: "Trenggalek, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Tari Turonggo Yakso, berasal dari Trenggalek, Jawa Timur, adalah perwujudan kekayaan budaya dan tradisi masyarakat lokal. Dipentaskan dalam berbagai konteks seperti upacara adat, seni, dan perayaan kebudayaan, tarian ini mengekspresikan keindahan khas Jawa Timur melalui gerakan lincah, ekspresi tangan yang indah, dan musik pengiring yang melibatkan kekayaan tradisional wilayah tersebut.</p> <br> <p style='text-indent: 45px';>Selain menjadi hiburan, Tari Turonggo Yakso berfungsi sebagai sarana untuk melestarikan dan memperkenalkan kekayaan budaya Jawa Timur kepada masyarakat, menjadikannya bagian yang tak terpisahkan dari warisan budaya yang dijaga dan dihargai oleh masyarakat Trenggalek.</p>",
+            },
+            {
+                category: "Acara",
+                image: "https://i.ibb.co/RN0cMfj/karapan-sapi.jpg",
+                name: "Karapan Sapi",
+                location: "Madura, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Kerapan Sapi Madura adalah tradisi unik di Pulau Madura, Indonesia, yang menggabungkan keterampilan mengendarai kerbau dengan kompetisi kecepatan. Dalam perhelatan ini, sepasang kerbau yang dihias dan dikendarai oleh seorang pengendara bersaing untuk mencapai garis finish tercepat di lintasan tanah. Para pengendara, yang disebut 'jawara' menunjukkan keahlian mengendalikan kerbaunya sambil berlomba untuk meraih kemenangan.</p><br><p style='text-indent: 45px;'>Kerapan Sapi Madura bukan hanya merupakan ajang kompetisi, tetapi juga mencerminkan tradisi dan kebanggaan masyarakat Madura. Even ini biasanya diadakan sebagai bagian dari perayaan lokal, seperti pesta rakyat atau festival tradisional. Kerapan Sapi menjadi daya tarik wisata yang memperkaya warisan budaya Indonesia, menampilkan kekompakan antara manusia, binatang, dan tradisi dalam sebuah ajang lomba yang menghibur dan mengakar kuat dalam kehidupan masyarakat Madura</p>",
+            },
+            {
+                category: "Tari",
+                image: "https://i.ibb.co/Pg02MyJ/2eeacc48af947b925a97e6c305089b92.jpg",
+                name: "Tari Jaipong",
+                location: "Jawa Barat",
+                pageContent: "<p style='text-indent: 45px;'>Tari Jaipong adalah tarian tradisional yang berasal dari Jawa Barat, Indonesia. Tarian ini diilhami oleh kekayaan seni dan budaya Sunda, menggabungkan gerakan tari tradisional dengan unsur-unsur modern. Jaipong mengutamakan gerakan tubuh yang dinamis, ekspressif, dan penuh semangat, seringkali disertai dengan irama musik yang khas.</p><br><p style='text-indent: 45px;'>Tari Jaipong awalnya dikembangkan oleh seniman Gugum Gumbira pada tahun 1960-an sebagai bentuk seni rakyat yang menggabungkan elemen tarian tradisional dengan musik modern. Kini, Jaipong menjadi populer di berbagai pertunjukan seni dan acara kebudayaan di Indonesia, serta menjadi bagian yang integral dalam pelestarian dan pengembangan warisan seni tradisional Sunda.</p>",
+            },
+            {
+                category: "Candi",
+                image: "https://i.ibb.co/JRpFsK7/image.png",
+                name: "Candi Singosari",
+                location: "Malang, Jawa Timur",
+                pageContent: "<p style='text-indent: 45px;'>Candi Singosari adalah kompleks candi yang terletak di Desa Candirenggo, Kecamatan Singosari, Kabupaten Malang, Jawa Timur, Indonesia. Candi ini berasal dari masa Kerajaan Singosari pada abad ke-13 dan dianggap sebagai peninggalan sejarah yang penting.</p><br><p style='text-indent: 45px;'>Candi Singosari terdiri dari beberapa candi kecil yang saling berdekatan, termasuk Candi Singosari, Candi Jago, dan Candi Kidal. Candi-candi ini mencerminkan gaya arsitektur candi Hindu, dengan relief-relief yang menggambarkan adegan-kehidupan sehari-hari, tokoh-tokoh epik, dan ajaran-ajaran agama Hindu.</p>",
+            },
+    ],
+};
+
+let popularContainer = document.createElement("div");
+popularContainer.classList.add("popular_container", "container", "grid");
+
+document.getElementById("explorer").appendChild(popularContainer);
+
+for (let i of explorer.data) {
+   let article = document.createElement("article");
+   article.classList.add("popular_card", i.category.toLowerCase());
+
+   let linkArticle = document.createElement("a");
+   article.setAttribute("data-item", JSON.stringify(i));
+   linkArticle.addEventListener("click", () => openModal(i));
+
+   let imgContainer = document.createElement("div");
+   imgContainer.classList.add("popular_image");
+
+   let image = document.createElement("img");
+   image.setAttribute("src", i.image);
+   image.classList.add("popular_img");
+
+   image.style.maxWidth = "100%";
+   image.style.height = "auto";
+   image.style.width = "300px";
+
+   let shadow = document.createElement("div");
+   shadow.classList.add("popular_shadow");
+
+   imgContainer.appendChild(image);
+   imgContainer.appendChild(shadow);
+
+   linkArticle.appendChild(imgContainer);
+   article.appendChild(linkArticle);
+
+   let title = document.createElement("h2");
+   title.classList.add("popular_title");
+   title.innerText = i.name;
+
+   title.addEventListener("click", () => openModal(i));
+
+   article.appendChild(title);
+
+   let location = document.createElement("div");
+   location.classList.add("popular_location");
+
+   let mapPinIcon = document.createElement("i");
+   mapPinIcon.classList.add("ri-map-pin-line");
+
+   let locationSpan = document.createElement("span");
+   locationSpan.innerText = i.location;
+
+   location.appendChild(mapPinIcon);
+   location.appendChild(locationSpan);
+
+   article.appendChild(location);
+   popularContainer.appendChild(article);
+}
+
+function openModal(item) {
+   console.log("Opening modal for item:", item);
+
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.innerHTML = ""; 
+
+   let modal = document.createElement("div");
+   modal.classList.add("modal");
+
+   let closeModalButton = document.createElement("span");
+   closeModalButton.classList.add("close-modal");
+   closeModalButton.innerHTML = "&times;";
+   closeModalButton.addEventListener("click", () => closeModal());
+
+   let modalContent = document.createElement("div");
+   modalContent.classList.add("modal-content");
+
+   modalContent.innerHTML = `
+      <div class="modal-image">
+            <img src="${item.image}" alt="${item.name}" class="modal-img">
+      </div>
+      <div class="modal-description">
+            <h2>${item.name}</h2>
+            <p>${item.pageContent}</p>
+      </div>
+   `;
+
+   modal.appendChild(closeModalButton);
+   modal.appendChild(modalContent);
+   modalContainer.appendChild(modal);
+
+   modalContainer.classList.add("active-modal");
+}
+
+function closeModal() {
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.classList.remove("active-modal");
+   document.body.style.overflow = "auto";
+   event.preventDefault();
+}
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+    closeModal();
+    }
+});
+
+let article = document.createElement("article");
+article.classList.add("popular_card", i.category.toLowerCase());
+article.setAttribute("data-item", JSON.stringify(i));
+
+article.addEventListener("click", () => openModal(i));
+
+function closeModal() {
+   let modalContainer = document.getElementById("modal-container");
+   modalContainer.classList.remove("active-modal");
+   document.body.style.overflow = "auto";
+   event.preventDefault();
+}
         </script>
     </body>
 </html>
