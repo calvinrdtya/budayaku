@@ -479,13 +479,13 @@
 }
 
 .jumbotron {
-	height: 450px;
+	height: 430px;
 	background-image: url('../img/home1.png');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: 0 -100px;
 	overflow: hidden;
-	position: relative;
+	/* position: relative; */
 }
 
 .horizontal-about {
@@ -494,8 +494,70 @@
   margin: 20px auto;
 }
 
-/* .about_title {
-  margin-top: 2rem;
-  font-size: var(--h3-font-size);
-} */
-  
+.horizontal-line {
+  border: 1px solid #ccc; 
+  width: 76%; 
+  margin: 20px auto;
+}
+
+.FFF {
+  width: 300px;
+  height: 100px;
+  background-color: #FFF;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.black {
+  width: 300px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease;
+}
+
+.greyy {
+  width: 300px;
+  height: 100px;
+  background-color: #151515;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+.FFF:hover {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.black:hover {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.greyy:hover {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.about__data img {
+  box-shadow: 0 4px 4px rgba(255, 255, 255, 0.3);
+}

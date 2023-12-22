@@ -31,6 +31,7 @@
   --body-font: 'Open Sans', sans-serif;
   --title-font: 'Raleway', sans-serif;
   --biggest-font-size: 2.5rem;
+  --big-font-size: 2rem;
   --medium-font-size: 1.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -388,6 +389,26 @@ input {
   font-weight: var(--font-medium);
 }
 
+.about_header {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.m {
+  margin-top: 1.5rem;
+}
+
+.about_data-title {
+  color: var(--white-color);
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+}
+
+.about_data-subtitle {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
 .home__social {
   display: flex;
   flex-direction: column;
@@ -534,6 +555,10 @@ input {
   transform: var(--img-scale);
 }
 
+.about_log {
+  text-align: center;
+}
+
 /*=============== DISCOVER ===============*/
 #discover {
   margin-top: -3rem;
@@ -657,6 +682,11 @@ input {
 /*=============== PLACES ===============*/
 .place__card, .place__img {
   border-radius: 1rem;
+}
+
+.color_container {
+  /* grid-template-columns: repeat(2, 1fr); */
+  justify-content: center;
 }
 
 .place__container {
@@ -909,6 +939,10 @@ input {
     grid-template-columns: max-content;
     justify-content: center;
   }
+  .color_container {
+    grid-template-columns: max-content;
+    justify-content: center;
+  }
   .experience__content {
     padding: 0;
   }
@@ -935,6 +969,9 @@ input {
     justify-content: center;
   }
   .place__container {
+    grid-template-columns: repeat(3, max-content);
+  }
+  .color_container {
     grid-template-columns: repeat(3, max-content);
   }
   .subscribe__form {
@@ -1025,6 +1062,7 @@ input {
     margin-right: auto;
   }
   .discover__container,
+  .color_container,
   .place__container {
     padding-top: 2rem;
   }
@@ -1069,7 +1107,6 @@ input {
   .about_ {
     grid-template-columns: 400px 460px;
     column-gap: 8.5rem;
-    padding-block: 1rem;
   }
 }
 
@@ -1122,7 +1159,7 @@ input {
     width: 290px;
   }
   #discover {
-    margin-top: 7rem;
+    margin-top: 2rem;
   }
   .discover__card {
     width: 237px;
@@ -1158,17 +1195,56 @@ input {
   .pesona_description {
     padding: 0 8rem;
   }
+  .color_container {
+    gap: 3rem 2rem;
+  }
   .place__container {
     gap: 3rem 2rem;
   }
+  .place {
+    margin-bottom: 3rem;
+  }
   .place__card, .place__img {
-    border-radius: 1rem 0 1rem 0;
     height: 160px !important;
     width: 240px !important;  
+  }
+  .img-kiri {
+    margin-top: -10rem;
+  }
+  .img-kanan {
+    margin-top: 10rem;
+  }
+  .about_log {
+    text-align: initial;
+  }
+  .about_data-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-medium);
+  }
+  .about_data-subtitle {
+    font-size: var(--h2-font-size);
   }
   .footer__content {
     justify-items: center;
   }
+  .jumbotron_shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 680px;
+    background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 28%, hsl(0, 0%, 0%) 64%);
+  }
+}
+
+.jumbotron_shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 480px;
+  background: linear-gradient(180deg, hsla(0, 0%, 0%, 0) 28%, hsl(0, 0%, 0%) 90%);
+  z-index: 1;
 }
 
 @media screen and (min-width: 1200px) {
