@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" id="home">
-  <head>
+    <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Explore</title>
 
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -13,8 +12,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/content.css">
     <link rel="stylesheet" href="assets/css/tab.css">
-
-  </head>
+    <title>Explore</title>
+</head>
 <body>
     <header class="header" id="header">
         <nav class="nav container">
@@ -146,11 +145,11 @@
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
             var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/65689f55bfb79148e5988a49/1hggasrqh';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
+                s1.async=true;
+                s1.src='https://embed.tawk.to/65689f55bfb79148e5988a49/1hggasrqh';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
             })();
         </script>
 <script>
@@ -355,219 +354,219 @@
         ],
     };
 
-let popularContainer = document.createElement("div");
-popularContainer.classList.add("popular_container", "container", "grid");
+    let popularContainer = document.createElement("div");
+    popularContainer.classList.add("popular_container", "container", "grid");
 
-document.getElementById("explorer").appendChild(popularContainer);
+    document.getElementById("explorer").appendChild(popularContainer);
 
-for (let i of explorer.data) {
-   let article = document.createElement("article");
-   article.classList.add("popular_card", i.category.toLowerCase());
+    for (let i of explorer.data) {
+    let article = document.createElement("article");
+    article.classList.add("popular_card", i.category.toLowerCase());
 
-   let linkArticle = document.createElement("a");
-   article.setAttribute("data-item", JSON.stringify(i));
-   linkArticle.addEventListener("click", () => openModal(i));
+    let linkArticle = document.createElement("a");
+    article.setAttribute("data-item", JSON.stringify(i));
+    linkArticle.addEventListener("click", () => openModal(i));
 
-   let imgContainer = document.createElement("div");
-   imgContainer.classList.add("popular_image");
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add("popular_image");
 
-   let image = document.createElement("img");
-   image.setAttribute("src", i.image);
-   image.classList.add("popular_img");
+    let image = document.createElement("img");
+    image.setAttribute("src", i.image);
+    image.classList.add("popular_img");
 
-   image.style.maxWidth = "100%";
-   image.style.height = "auto";
-   image.style.width = "300px";
+    image.style.maxWidth = "100%";
+    image.style.height = "auto";
+    image.style.width = "300px";
 
-   let shadow = document.createElement("div");
-   shadow.classList.add("popular_shadow");
+    let shadow = document.createElement("div");
+    shadow.classList.add("popular_shadow");
 
-   imgContainer.appendChild(image);
-   imgContainer.appendChild(shadow);
+    imgContainer.appendChild(image);
+    imgContainer.appendChild(shadow);
 
-   linkArticle.appendChild(imgContainer);
-   article.appendChild(linkArticle);
+    linkArticle.appendChild(imgContainer);
+    article.appendChild(linkArticle);
 
-   let title = document.createElement("h2");
-   title.classList.add("popular_title");
-   title.innerText = i.name;
+    let title = document.createElement("h2");
+    title.classList.add("popular_title");
+    title.innerText = i.name;
 
-   title.addEventListener("click", () => openModal(i));
+    title.addEventListener("click", () => openModal(i));
 
-   article.appendChild(title);
+    article.appendChild(title);
 
-   let location = document.createElement("div");
-   location.classList.add("popular_location");
+    let location = document.createElement("div");
+    location.classList.add("popular_location");
 
-   let mapPinIcon = document.createElement("i");
-   mapPinIcon.classList.add("ri-map-pin-line");
+    let mapPinIcon = document.createElement("i");
+    mapPinIcon.classList.add("ri-map-pin-line");
 
-   let locationSpan = document.createElement("span");
-   locationSpan.innerText = i.location;
+    let locationSpan = document.createElement("span");
+    locationSpan.innerText = i.location;
 
-   location.appendChild(mapPinIcon);
-   location.appendChild(locationSpan);
+    location.appendChild(mapPinIcon);
+    location.appendChild(locationSpan);
 
-   article.appendChild(location);
-   popularContainer.appendChild(article);
-}
-
-function openModal(item) {
-   console.log("Opening modal for item:", item);
-
-   let modalContainer = document.getElementById("modal-container");
-   modalContainer.innerHTML = ""; 
-
-   let modal = document.createElement("div");
-   modal.classList.add("modal");
-
-   let closeModalButton = document.createElement("span");
-   closeModalButton.classList.add("close-modal");
-   closeModalButton.innerHTML = "&times;";
-   closeModalButton.addEventListener("click", () => closeModal());
-
-   let modalContent = document.createElement("div");
-   modalContent.classList.add("modal-content");
-
-   modalContent.innerHTML = `
-      <div class="modal-image">
-            <img src="${item.image}" alt="${item.name}" class="modal-img">
-      </div>
-      <div class="modal-description">
-            <h2>${item.name}</h2>
-            <p>${item.pageContent}</p>
-      </div>
-   `;
-
-   modal.appendChild(closeModalButton);
-   modal.appendChild(modalContent);
-   modalContainer.appendChild(modal);
-
-   modalContainer.classList.add("active-modal");
-}
-
-function closeModal() {
-   let modalContainer = document.getElementById("modal-container");
-   modalContainer.classList.remove("active-modal");
-   document.body.style.overflow = "auto";
-   event.preventDefault();
-}
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-    closeModal();
+    article.appendChild(location);
+    popularContainer.appendChild(article);
     }
-});
 
-let article = document.createElement("article");
-article.classList.add("popular_card", i.category.toLowerCase());
-article.setAttribute("data-item", JSON.stringify(i));
+    function openModal(item) {
+    console.log("Opening modal for item:", item);
 
-article.addEventListener("click", () => openModal(i));
+    let modalContainer = document.getElementById("modal-container");
+    modalContainer.innerHTML = ""; 
 
-function closeModal() {
-   let modalContainer = document.getElementById("modal-container");
-   modalContainer.classList.remove("active-modal");
-   document.body.style.overflow = "auto";
-   event.preventDefault();
-}
+    let modal = document.createElement("div");
+    modal.classList.add("modal");
 
-function filterExplore(value) {
-    let buttons = document.querySelectorAll(".button-value");
-    buttons.forEach((button) => {
-        if (value.toUpperCase() === button.innerText.toUpperCase()) {
-            button.classList.add("active");
-        } else {
-            button.classList.remove("active");
+    let closeModalButton = document.createElement("span");
+    closeModalButton.classList.add("close-modal");
+    closeModalButton.innerHTML = "&times;";
+    closeModalButton.addEventListener("click", () => closeModal());
+
+    let modalContent = document.createElement("div");
+    modalContent.classList.add("modal-content");
+
+    modalContent.innerHTML = `
+        <div class="modal-image">
+                <img src="${item.image}" alt="${item.name}" class="modal-img">
+        </div>
+        <div class="modal-description">
+                <h2>${item.name}</h2>
+                <p>${item.pageContent}</p>
+        </div>
+    `;
+
+    modal.appendChild(closeModalButton);
+    modal.appendChild(modalContent);
+    modalContainer.appendChild(modal);
+
+    modalContainer.classList.add("active-modal");
+    }
+
+    function closeModal() {
+    let modalContainer = document.getElementById("modal-container");
+    modalContainer.classList.remove("active-modal");
+    document.body.style.overflow = "auto";
+    event.preventDefault();
+    }
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+        closeModal();
         }
     });
 
-    let elements = document.querySelectorAll(".popular_card");
-    elements.forEach((element) => {
-        if (value === "all") {
-            element.classList.remove("hide");
-        } else {
-            if (element.classList.contains(value.toLowerCase())) {
+    let article = document.createElement("article");
+    article.classList.add("popular_card", i.category.toLowerCase());
+    article.setAttribute("data-item", JSON.stringify(i));
+
+    article.addEventListener("click", () => openModal(i));
+
+    function closeModal() {
+    let modalContainer = document.getElementById("modal-container");
+    modalContainer.classList.remove("active-modal");
+    document.body.style.overflow = "auto";
+    event.preventDefault();
+    }
+
+    function filterExplore(value) {
+        let buttons = document.querySelectorAll(".button-value");
+        buttons.forEach((button) => {
+            if (value.toUpperCase() === button.innerText.toUpperCase()) {
+                button.classList.add("active");
+            } else {
+                button.classList.remove("active");
+            }
+        });
+
+        let elements = document.querySelectorAll(".popular_card");
+        elements.forEach((element) => {
+            if (value === "all") {
                 element.classList.remove("hide");
+            } else {
+                if (element.classList.contains(value.toLowerCase())) {
+                    element.classList.remove("hide");
+                } else {
+                    element.classList.add("hide");
+                }
+            }
+        });
+    }
+
+    document.getElementById("search-input").addEventListener("input", (event) => {
+    if (event.key === "Enter") {
+        filterBySearch();
+    }
+    });
+
+    function filterBySearch(searchInput) {
+        if (searchInput === undefined) {
+            searchInput = document.getElementById("search-input").value.trim().toUpperCase();
+        }
+
+        let elements = document.querySelectorAll(".popular_card");
+        let noResultsMessage = document.getElementById("no-results-message");
+
+        let foundResults = false;
+
+        elements.forEach((element) => {
+            let title = element.querySelector(".popular_title").innerText.toUpperCase();
+            let category = element.classList[1].toUpperCase();
+            let location = element.querySelector(".popular_location span").innerText.toUpperCase();
+
+            let additionalContent = title + " " + category + " " + location;
+
+            if (searchInput === "" || additionalContent.includes(searchInput)) {
+                element.classList.remove("hide");
+                foundResults = true;
             } else {
                 element.classList.add("hide");
             }
-        }
-    });
-}
+        });
 
-document.getElementById("search-input").addEventListener("input", (event) => {
-   if (event.key === "Enter") {
-      filterBySearch();
-   }
-});
-
-function filterBySearch(searchInput) {
-    if (searchInput === undefined) {
-        searchInput = document.getElementById("search-input").value.trim().toUpperCase();
-    }
-
-    let elements = document.querySelectorAll(".popular_card");
-    let noResultsMessage = document.getElementById("no-results-message");
-
-    let foundResults = false;
-
-    elements.forEach((element) => {
-        let title = element.querySelector(".popular_title").innerText.toUpperCase();
-        let category = element.classList[1].toUpperCase();
-        let location = element.querySelector(".popular_location span").innerText.toUpperCase();
-
-        let additionalContent = title + " " + category + " " + location;
-
-        if (searchInput === "" || additionalContent.includes(searchInput)) {
-            element.classList.remove("hide");
-            foundResults = true;
+        if (foundResults) {
+            noResultsMessage.style.display = "none";
         } else {
-            element.classList.add("hide");
+            let container = document.createElement("div");
+
+            let text = document.createElement("span");
+            text.innerText = "Data Not Found";
+
+            let icon = document.createElement("span");
+            icon.classList.add("material-icons", "larger-icon");
+            icon.innerText = "search_off";
+
+            container.appendChild(icon);
+            container.appendChild(text);
+
+            noResultsMessage.innerHTML = '';
+            noResultsMessage.appendChild(container);
+
+            container.style.display = "flex";
+            container.style.flexDirection = "column";
+            container.style.alignItems = "center";
+            noResultsMessage.style.display = "block";
         }
-    });
 
-    if (foundResults) {
-        noResultsMessage.style.display = "none";
-    } else {
-        let container = document.createElement("div");
-
-        let text = document.createElement("span");
-        text.innerText = "Data Not Found";
-
-        let icon = document.createElement("span");
-        icon.classList.add("material-icons", "larger-icon");
-        icon.innerText = "search_off";
-
-        container.appendChild(icon);
-        container.appendChild(text);
-
-        noResultsMessage.innerHTML = '';
-        noResultsMessage.appendChild(container);
-
-        container.style.display = "flex";
-        container.style.flexDirection = "column";
-        container.style.alignItems = "center";
-        noResultsMessage.style.display = "block";
+        let style = document.createElement("style");
+        style.innerHTML = ".larger-icon { font-size: 3em; }";
+        document.head.appendChild(style);
     }
 
-    let style = document.createElement("style");
-    style.innerHTML = ".larger-icon { font-size: 3em; }";
-    document.head.appendChild(style);
-}
+        document.addEventListener("DOMContentLoaded", function () {
+            var exploreLink = document.getElementById("explore-link");
 
-document.addEventListener("DOMContentLoaded", function () {
-        var exploreLink = document.getElementById("explore-link");
+            if (exploreLink) {
+                exploreLink.addEventListener("click", function (event) {
+                    event.preventDefault();
 
-        if (exploreLink) {
-            exploreLink.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                document.querySelector("#explore").scrollIntoView({
-                    behavior: "smooth"
+                    document.querySelector("#explore").scrollIntoView({
+                        behavior: "smooth"
+                    });
                 });
-            });
-        }
-    });
-</script>
+            }
+        });
+    </script>
   </body>
 </html>

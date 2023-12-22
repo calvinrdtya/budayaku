@@ -386,7 +386,6 @@
   display: grid;
   grid-column-gap: 1.5em;
   padding: 2em 0;
-  margin-bottom: 20rem;
 }
 
 .hide {
@@ -399,7 +398,6 @@
   color: var(--title-color);
   justify-content: center;
   text-align: center;
-  margin-top: -24rem;
 }
 
 @media screen and (max-width: 768px) {
