@@ -315,6 +315,9 @@
                         <a href="explore.html" class="nav_link active-link">Explore</a>
                     </li>
                     <li class="nav_item">
+                        <a href="event.html" class="nav_link">Event</a>
+                    </li>
+                    <li class="nav_item">
                         <a href="about.html" class="nav_link">About Us</a>
                     </li>
                 </ul>
@@ -331,222 +334,26 @@
         </nav>
     </header>
 
-    <div class="container tab-cont" style="margin-top: 10rem;">
-        <div class="tab-container">
-          <div class="tab-filter-container">
-            <li class="filter-btn active-tab" data-tab="explore">
-              <p class="tab_title">Explore</p>
-            </li>
-            <li class="filter-btn" data-tab="event">
-                <p class="tab_title">Event</p>
-            </li>
-          </div>
-
-          <div class="tab-filter-item-container" style="height: 145rem;">
-            <div class="tab-item explore select_tab">
-                <div class="section__title">
-                    <h4>Jelajahi Kebudayaan</h4>
-                </div>
-                <section class="popular section explore-container">
-                    <div class="wrapper">
-                       <div id="search-container">
-                         <input type="search" id="search-input" placeholder="Cari"/>
-                         <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
-                       </div>
-                       <div id="buttons">
-                         <button class="button-value" onclick="filterExplore('all')">All</button>
-                         <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
-                         <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
-                         <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
-                         <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
-                       </div>
-                    </div>
-                    <div id="explorer" style="cursor: pointer;"></div>
-                    <div id="no-results-message" class="no-results"></div>
-                 </section>
-            </div>
-
-            <div class="tab-item event">
-                <div class="title_event">
-                    <h4>Popular Event</h4>
-                </div>
-                <section class="event_animation">
-                    <div class="event_container">
-                        <input type="radio" name="slide-group-1" class="input_event" id="popular-1" checked>
-                        <label for="popular-1" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">5-9 Juli</div>
-                                <div class="event_description">
-                                    <h4>KEN Juli 2023 - Ethno Carnival</h4>
-                                    <p><i class="ri-map-pin-line"> Banyuwangi, Jawa Timur</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-1" class="input_event" id="popular-2">
-                        <label for="popular-2" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">25-27 Agustus</div>
-                                <div class="event_description">
-                                    <h4>KEN Agustus 2023 - Dieng Culture Fest</h4>
-                                    <p><i class="ri-map-pin-line"> Dieng, Jawa Tengah</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-1" class="input_event" id="popular-3">
-                        <label for="popular-3" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">21 Maret</div>
-                                <div class="event_description">
-                                    <h4>Pawai Ogoh-Ogoh</h4>
-                                    <p><i class="ri-map-pin-line"> Denpasar, Bali</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-1" class="input_event" id="popular-4">
-                        <label for="popular-4" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">7 Oktober</div>
-                                <div class="event_description">
-                                    <h4>Wayang Jogja Night Carnival 2023</h4>
-                                    <p><i class="ri-map-pin-line"> Yogyakarta</i></p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </section>
-
-                <div class="title_event" style="margin-top: -3rem;">
-                    <h4>Lainnya</h4>
-                </div>
-                <section class="event_animation">
-                    <div class="event_container">
-                        <input type="radio" name="slide-group-2" class="input_event" id="maret-1" checked>
-                        <label for="maret-1" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">10 Maret</div>
-                                <div class="event_description">
-                                    <h4>Dugderan</h4>
-                                    <p><i class="ri-map-pin-line"> Semarang, Jawa Tengah</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-2" class="input_event" id="maret-2">
-                        <label for="maret-2" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">16 September</div>
-                                <div class="event_description">
-                                    <h4>Festival Gandrung Sewu</h4>
-                                    <p><i class="ri-map-pin-line"> Banyuwangi, Jawa Timur</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-2" class="input_event" id="maret-3">
-                        <label for="maret-3" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">8 Desember</div>
-                                <div class="event_description">
-                                    <h4>Festival Pesona Minangkabau</h4>
-                                    <p><i class="ri-map-pin-line"> Minangkabau, Sumatera Barat</i></p>
-                                </div>
-                            </div>
-                        </label>
-                        <input type="radio" name="slide-group-2" class="input_event" id="maret-4">
-                        <label for="maret-4" class="card event_card">
-                            <div class="row event_row">
-                                <div class="icon">4 November</div>
-                                <div class="event_description">
-                                    <h4>Wakatobi Wave</h4>
-                                    <p><i class="ri-map-pin-line"> Wakatobi, Sulawesi Tenggara</i></p>
-                                </div>
-                            </div>
-                        </label>
-                    </div>
-                </section>
-                
-                <section class="place section" id="place">
-                    <div class="section__title">
-                        <h4>Rekomendasi</h4>
-                    </div>
-                    <div class="place__container container grid">
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event-musik.jpg" alt="" class="place__img">
-                            
-                            <div class="place__content">
-                                <span class="place__rating" >
-                                    <span class="place__subtitle">Music Event</span>
-                                </span>
-    
-                                <div class="place__data">
-                                    <h3 class="place__title">Music Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event-kuliner.jpg" alt="" class="place__img">
-                            
-                            <div class="place__content">
-                                <span class="place__rating">
-                                    <span class="place__subtitle"></span>
-                                </span>
-                                <div class="place__data">
-                                    <h3 class="place__title">Culinary Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event-olahraga.jpg" alt="" class="place__img">
-                            
-                            <div class="place__content">
-                                <span class="place__rating">
-                                    <span class="place__subtitle"></span>
-                                </span>
-                                <div class="place__data">
-                                    <h3 class="place__title">Sport Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event_seni.jpeg" alt="" class="place__img">
-                            
-                            <div class="place__content">
-                                <span class="place__rating">
-                                    <span class="place__subtitle"></span>
-                                </span>
-                                <div class="place__data">
-                                    <h3 class="place__title">Art Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event-festival.jpg" alt="" class="place__img">
-                            <div class="img_shadow"></div>
-                            <div class="place__content">
-                                <span class="place__rating">
-                                    <span class="place__subtitle"></span>
-                                </span>
-                                <div class="place__data">
-                                    <h3 class="place__title">Carnaval Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="place__card">
-                            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/microsite-event/plan-your-trip/event-budaya.jpg" alt="" class="place__img">
-                            
-                            <div class="place__content">
-                                <span class="place__rating">
-                                    <span class="place__subtitle"></span>
-                                </span>
-                                <div class="place__data">
-                                    <h3 class="place__title">Cultural Event</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+    <div class="title_explore" style="margin-top: 7rem;">
+        <h4>Go Explore</h4>
     </div>
-</div>
+        <section class="popular section explore-container">
+            <div class="wrapper">
+                <div id="search-container">
+                    <input type="search" id="search-input" placeholder="Cari" autocomplete="off">
+                    <button title="search" id="search" onclick="filterBySearch()"><i class="ri-search-line"></i></button>
+                </div>
+                <div id="buttons">
+                    <button class="button-value" onclick="filterExplore('all')">All</button>
+                    <button class="button-value" onclick="filterExplore('Candi')">Candi</button>
+                    <button class="button-value" onclick="filterExplore('Tari')">Tari</button>
+                    <button class="button-value" onclick="filterExplore('Warisan')">Warisan</button>
+                    <button class="button-value" onclick="filterExplore('Acara')">Acara</button>
+                </div>
+            </div>
+            <div id="explorer" style="cursor: pointer;"></div>
+            <div id="no-results-message" class="no-results"></div>
+        </section>
 
     <footer class="footer section">
         <div class="footer__container container grid">
